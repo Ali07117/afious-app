@@ -11,10 +11,16 @@ import Faq from './sections/Faq';
 import WaitlistButton from './components/WaitlistButton';
 import Meeting from './sections/Meeting';
 import LocomotiveScroll from 'locomotive-scroll';
-const locomotiveScroll = new LocomotiveScroll();
+import { useEffect } from 'react';
+// const locomotiveScroll = new LocomotiveScroll();
 
 gsap.registerPlugin(ScrollTrigger)
 function page() {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const scroll = new LocomotiveScroll();
+    }
+  }, []);
   const [open, setOpen] = useState(false);
   useGSAP(
     () => {
