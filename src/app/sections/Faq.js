@@ -67,19 +67,19 @@ function Faq() {
     };
 
     return (
-        <div className='w-[100%] bg-[] mt-[150px]'>
-            <h2 className='px-[100px] text-[#A6A6A6] font-[800] font-[Inter] text-[70px] leading-[98%]'>
+        <div className='w-[100%] bg-[] faq-container pt-[20%]  faq-padding-container mt-[100px]'>
+            <h2 className='px-[100px] faq-heading text-[#A6A6A6] font-[800] font-[Inter] text-[70px] leading-[98%]'>
                 Frequently Asked Questions
             </h2>
 
-            <p className="px-[100px] underline mb-[20px] mt-[60px] underline-offset-[8px] text-[32px] font-[500] font-[Inter] text-[#000000]">
+            <p className="px-[100px] before-signing underline mb-[20px] faq-heading-padding mt-[60px] underline-offset-[8px] text-[32px] font-[500] font-[Inter] text-[#000000]">
                 Before Signing Up
             </p>
 
             {beforeSignupFaq.map((item, index) => (
                 <div
                     key={index}
-                    className='mx-[30px] px-[70px] border-b border-b-[#B6BDC6] border-b-[1px] py-[18px]'
+                    className='mx-[30px] faq-div px-[70px] border-b border-b-[#B6BDC6] border-b-[1px] py-[18px]'
                 >
                     <div
                         className={`question font-[Inter] font-[800] text-[32px] leading-[98%] cursor-pointer ${openIndex === index ? 'text-[#2D404F]' : 'text-[#A6A6A6]'
@@ -96,14 +96,14 @@ function Faq() {
                 </div>
             ))}
 
-            <p className="px-[100px] underline mb-[20px] mt-[60px] underline-offset-[8px] text-[32px] font-[500] font-[Inter] text-[#000000]">
+            <p className="px-[100px] after-signing faq-heading-padding underline mb-[20px] mt-[60px] after-signing-up underline-offset-[8px] text-[32px] font-[500] font-[Inter] text-[#000000]">
                 After Signing Up
             </p>
 
             {afterSignupFaq.map((item, index) => (
                 <div
                     key={index + beforeSignupFaq.length} // prevent key clash
-                    className='mx-[30px] px-[70px] border-b border-b-[#B6BDC6] border-b-[1px] py-[18px]'
+                    className='mx-[30px] faq-div px-[70px] border-b border-b-[#B6BDC6] border-b-[1px] py-[18px]'
                 >
                     <div
                         className={`question font-[Inter] font-[800] text-[32px] leading-[98%] cursor-pointer ${openIndex === index + beforeSignupFaq.length ? 'text-[#2D404F]' : 'text-[#A6A6A6]'
