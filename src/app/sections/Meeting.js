@@ -2,7 +2,7 @@ import React from 'react';
 
 function Meeting() {
   return (
-    <div className='px-[100px] meeting-container'>
+    <div id="what" className='px-[100px] meeting-container'>
       <div className=' py-[100px] meeting-padding-container meeting-box flex border-b border-b-[1px] border-b-[#A6A6A6]'>
       <div className="meeting-left pt-[3%] w-[50%] bg-[]">
         <h2 className='text-[42px] font-[700] meeting-heading text font-[Lexend] leading-[122%] text-[#A6A6A6]'>Meet People Who Just Get You</h2>

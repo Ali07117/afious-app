@@ -10,7 +10,7 @@ function Hero() {
  
   return (
     <div
-      className=' h-[calc(98vh-110px)] bg-[] relative hero-main-container w-[100%] flex items-cennter justify-center'
+      className=' h-[calc(98vh-90px)] bg-[] relative hero-main-container w-[100%] flex items-cennter justify-center'
     >
     
     <div className='hero-text-container-main opacity-[0] absolute top-[15%] px-[3%] z-[-1]'>

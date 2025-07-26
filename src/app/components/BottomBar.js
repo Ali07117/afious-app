@@ -9,7 +9,7 @@ function BottomBar({open, setopen}) {
       </div>
       <div className='h-[100%] flex-1 flex px-[6%] bottom-bar-text-box items-center justify-between'>
         <p className='font-[Inter] font-[800] what-text bottom-bar-text text-[32px] leading-[100%] text-[#A6A6A6]'>What</p>
-        <button className='px-[30px] bottom-bar-button-box py-[8px] bottom-bar-text border-[0px] outline-[0px] bg-[#2AFF39] rounded-[40px] font-[notoo] font-[700] text-[32px] text-[#000] leading-[32px]'>How It works</button>
+        <button className='px-[30px] bottom-bar-button-box py-[8px] bottom-bar-text border-[0px] outline-[0px] bg-[#2AFF39] rounded-[40px] font-[notoo] font-[700] text-[32px] text-[#000] leading-[32px]'>How It <span>workss</span></button>
         <p className='font-[Inter] font-[800] faqs-text bottom-bar-text text-[32px] leading-[100%] text-[#A6A6A6]'>FAQs</p>
       </div>
     </div>

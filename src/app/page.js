@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/all";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import BottomBar from './components/BottomBar';
@@ -12,6 +14,8 @@ import WaitlistButton from './components/WaitlistButton';
 import Meeting from './sections/Meeting';
 import LocomotiveScroll from 'locomotive-scroll';
 import { useEffect } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import Contact from './contact/page';
 // const locomotiveScroll = new LocomotiveScroll();
 
 gsap.registerPlugin(ScrollTrigger)
@@ -22,6 +26,8 @@ function page() {
     }
   }, []);
   const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const pathname = usePathname();
   useGSAP(()=>{
     // gsap.set(".slidesline",{scale:10})
     var tl = gsap.timeline({
@@ -45,29 +51,33 @@ function page() {
             opacity: 1,
           }, "1")
           tl.to(".left-image", {
-            translateY: "-100%",
+            // translateY: "-100%",
+            opacity: 0,
             duration: 2,
           }, "2")
           tl.to(".right-image", {
-            translateY: "-100%",
+            // translateY: "-100%",
+            opacity: 0,
             duration: 2,
           }, "2")
           tl.to(".center-image", {
-            translateY: "100%",
+            // translateY: "100%",
+            opacity: 0,
+            duration: 2,
             // delay: 0,
-          }, "3")
+          }, "2")
           tl.to(".white-bar1", {
             opacity: 0,
-          }, "4")
+          }, "2")
           tl.to(".white-bar2", {
             opacity: 0,
-          }, "4")
+          }, "2")
           tl.to(".hero-text-container-main-2", {
             opacity: 0,
-          }, "4")
+          }, "2")
           tl.to(".hero-text-container-main", {
             opacity: 1,
-          }, "5")
+          }, "2")
     //    ----------craft--------
     var tl2 = gsap.timeline({
         
@@ -177,51 +187,105 @@ function page() {
   return (
     
     <>
-     <div className="main w-full w-[100%] overflow-hidden " >
-      <div className="circle-animation" >
-      <div className="home section w-full h-[100vh] relative bg-[white] text-[white]" >
-      <div className={` ${open ? " translate-x-[0%]" : " translate-x-[-200%]"} duration-500 fixed top-0 left-0 w-full h-screen bg-[#FFFFFF] z-[101]`}>
+    {/* <Contact open2={open2} setOpen2={setOpen2}/> */}
+    <div className={` ${open ? " translate-x-[0%]" : " translate-x-[-200%]"} duration-500 fixed top-0 left-0 w-full h-screen bg-[#FFFFFF] z-[101]`}>
       <div className='flex justify-between nav-cross-container px-[80px] py-[70px]'>
       <div></div>
-        <button className='font-[notoo] nav-cross  text-[32px] font-[700] text-[#000000] bg-[#2AFF39] rounded-[40px] border-[0px] outline-[0px] px-[30px] py-[0px]' onClick={()=>{setOpen(!open)}}>
+        <button className='font-[notoo] hover:text-[#2AFF39] duration-500 hover:bg-[#000000] nav-cross  text-[32px] font-[700] text-[#000000] bg-[#2AFF39] rounded-[40px] border-[0px] outline-[0px] px-[30px] py-[0px]' onClick={()=>{setOpen(!open)}}>
           Close X
         </button>
       </div>
       <div className='ml-[180px] nav-text-container nav-text-box'>
-      <span className='flex itrms-center gap-[80px]'>
-        <p className='font-[Inter] nav-text font-[700] text-[70px] text-[#A6A6A6]'>What</p>
+      {/* <div className='flex items-center gap-[30px] cursor-pointer'>
+        <div className='nav-text hidden-section-default-text'><ScrollLink to="what" spy smooth activeClass="hidden-section-default-text2" onClick={() => setOpen(false)} ><p className='nav-text hidden-section-default-text'>What</p></ScrollLink></div>
+        <ScrollLink to="what" spy smooth activeClass="active-arrow" onClick={() => setOpen(false)}><img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink>
+      </div> */}
+      <span className='flex items-center gap-[30px] cursor-pointer' >
+        <p className='nav-text hidden-section-default-text'><ScrollLink to="what" onClick={()=>{setOpen(!open)}} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>What</ScrollLink></p>
+        <ScrollLink to="what" onClick={()=>{setOpen(!open)}} spy smooth activeClass="active-arrow"> <img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink>
       </span>
-      <span className='flex itrms-center arrow-container gap-[80px]'>
-        <p className='font-[Inter] nav-text font-[700] text-[70px] text-[#000000]'>How It Works</p>
-        <img className='nav-arrow' src="/images/navarrow.svg" alt="" />
+      <span className='flex items-center gap-[30px] cursor-pointer' >
+        <p className='nav-text hidden-section-default-text'><ScrollLink to="how-it-work" onClick={()=>{setOpen(!open)}} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>How It Works</ScrollLink></p>
+        <ScrollLink to="how-it-work" onClick={()=>{setOpen(!open)}} spy smooth activeClass="active-arrow"> <img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink>
       </span>
-      <span className='flex itrms-center gap-[80px]'>
-        <p className='font-[Inter] nav-text font-[700] text-[70px] text-[#A6A6A6]'>FAQs</p>
-       
+      <span className='flex items-center gap-[30px] cursor-pointer'>
+        <p className='nav-text hidden-section-default-text'><ScrollLink to="faq-id" onClick={()=>{setOpen(!open)}} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>FAQs</ScrollLink></p>
+        <ScrollLink to="faq-id" onClick={()=>{setOpen(!open)}} spy smooth activeClass="active-arrow"> <img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink>
       </span>
-      <span className='flex itrms-center gap-[80px]'>
+      <span className='flex items-center gap-[30px]'>
         <p className='font-[Inter] nav-text font-[700] text-[70px] text-[#A6A6A6]'>Blog</p>
      
       </span>
-      <span className='flex itrms-center gap-[80px]'>
-        <p className='font-[Inter] nav-text font-[700] text-[70px] text-[#A6A6A6]'>Contact</p>
-       
+      <Link href="/contact">
+      <span className='flex items-center gap-[30px]'>
+        <p className={`font-[Inter] nav-text font-[700] text-[70px] text-[#A6A6A6] ${pathname === "/contact" ? 'text-[#A6A6A6]' : ' text-[#000]'} `}>Contact</p>
       </span>
-      <button className='text-[#2AFF39] nav-text nav-button font-[Inter] translate-x-[-5%] font-[700] text-[70px] bg-[#000000] rounded-[100px] px-[40px]'>Join the Waitlist</button>
+      </Link>
+      <button className='text-[#2AFF39] nav-text nav-button font-[Inter] translate-x-[-5%] font-[700] text-[70px] hover:text-[#000000] hover:bg-[#2AFF39]  duration-500 bg-[#000000] rounded-[100px] px-[40px]'>Join the Waitlist</button>
       </div>
       </div>
-      <BottomBar open={open} setopen={setOpen} />
+     <div id='hero' className="main w-full w-[100%] overflow-hidden " >
+      {/* <BottomBar open={open} setopen={setOpen} /> */}
+      {/* ============== Bottom Bar ============== */}
+      <div className='fixed bottom-[20px] bottom-bar-container top-[88vh] flex items-center left-[50%] translate-x-[-50%] z-[100] h-[70px] rounded-[16px] border border-[1px] border-[#A6A6A6] bg-[#FFFFFF]  w-[95%]'>
+    
+      <div className='w-[70px] bottom-bar-icon bg-[#2AFF39] flex items-center justify-center h-[100%] rounded-l-[15px]'>
+        <img className='cursor-pointer bottom-bar-img h-[40%]' src="/images/baricon.svg" alt="" onClick={()=>{setOpen(!open)}}/>
+      </div>
+      <div className='h-[100%] flex-1 flex px-[6%] bottom-bar-text-box items-center justify-between'>
+        <p className='bottom-bar-button-box bottom-bar-text link-non-active'><ScrollLink to="what" spy smooth activeClass={"link-active"}>What</ScrollLink></p>
+        <p className='bottom-bar-button-box bottom-bar-text link-non-active'><ScrollLink to="how-it-work" spy smooth activeClass={"link-active"}> <span className='work-text-visible'>How It works</span> <span className='work-text-hidden'>Works</span></ScrollLink></p>
+        <p className='bottom-bar-button-box bottom-bar-text link-non-active'><ScrollLink to="faq-id" spy smooth offset={300} activeClass={"link-active"}>FAQs</ScrollLink></p>
+        
+        {/* <p className='font-[Inter] font-[800] faqs-text bottom-bar-text text-[32px] leading-[100%] text-[#A6A6A6]'>FAQs</p> */}
+      </div>
+    </div>
+      <div className="circle-animation" >
+      <div className="home section w-full h-[100vh] relative bg-[white] text-[white]" >
+      
      <Navbar/>
            
-        
+       {/* =========== hero section ========= */}
       <Hero/>
     </div>
     </div>
-    {/* -----------------Craft Section------------------- */}
-        <Meeting/>
-    <div className='' >
-    {/* -------------craft--------------- */}
-    <div className='px-[100px] craft-section work-container flex min-h-[100px] bg-[] work-margin-container mt-[100px]'>
+    {/* ----------------- What section ------------------- */}
+        {/* <Meeting/> */}
+        <div name="what" id="" className='px-[100px] duration-500 meeting-container'>
+      <div className=' py-[100px] meeting-padding-container meeting-box flex border-b border-b-[1px] border-b-[#A6A6A6]'>
+      <div className="meeting-left pt-[3%] w-[50%] bg-[]">
+        <h2 className='text-[42px] font-[700] meeting-heading text font-[Lexend] leading-[122%] text-[#A6A6A6]'>Meet People Who Just Get You</h2>
+        <p className='font-[Inter] font-[400] meeting-para mt-[60px] text-[32px] text-[#000000] leading-[100%]'>No more awkward intros. Afious connects you with students who share your interests, background, or school — so conversations flow naturally from the start.</p>
+      </div>
+      <div className="meeting-right w-[50%] flex bg-[] items-center justify-center">
+        <img className='meeting-img' src="/images/howitworkgetyou.svg" alt="" />
+      </div>
+
+      </div>
+      <div className=' py-[100px] meeting-padding-container meeting-box flex border-b border-b-[1px] border-b-[#A6A6A6]'>
+      <div className="meeting-left pt-[3%] w-[50%] bg-[]">
+        <h2 className='text-[42px] font-[700] meeting-heading font-[Lexend] leading-[122%] text-[#A6A6A6]'>Make a New Place Feel Like Home</h2>
+        <p className='font-[Inter]  meeting-para mt-[60px] text-[32px] text-[#000000] leading-[100%]'>Starting over can feel overwhelming. Afious helps you build a support system wherever you are, one real connection at a time.</p>
+      </div>
+      <div className="meeting-right w-[50%] flex bg-[] items-center justify-center">
+        <img className='meeting-img' src="/images/howitworkhome.svg" alt="" />
+      </div>
+
+      </div>
+      <div className=' py-[100px] meeting-padding-container meeting-box flex border-b border-b-[1px] border-b-[#A6A6A6]'>
+      <div className="meeting-left pt-[3%] w-[50%] bg-[]">
+        <h2 className='text-[42px] font-[700] meeting-heading font-[Lexend] leading-[122%] text-[#A6A6A6]'>Your Circle Starts Here</h2>
+        <p className='font-[Inter]  meeting-para mt-[60px] text-[32px] text-[#000000] leading-[100%]'>Go from “I don’t know anyone” to “These are my people.” Chat 1-on-1 or grow your own crew — all within one welcoming space.</p>
+      </div>
+      <div className="meeting-right w-[50%] flex bg-[] items-center justify-center">
+        <img className='meeting-img' src="/images/howitworkcircle.svg" alt="" />
+      </div>
+
+      </div>
+    </div>
+    <div id='how-it-work' className='' >
+    {/* ------------- How it work section start --------------- */}
+    <div className='px-[100px] craft-section work-container flex min-h-[100px] bg-[] work-margin-container pt-[100px]'>
       <div className="w-[40%] bg-[] h-[100%] work-left">
         <h2 className='text-[#A6A6A6] work-heading font-[Inter] font-[800] text-[70px] '>How It Works</h2>
       </div>
@@ -230,8 +294,8 @@ function page() {
             <h3 className='text-[#A6A6A6] font-[Lexend] work-card-heading leading-[124%] font-[700] text-[48px]'>Choose What Matters to You</h3>
             <p className='mt-[20px] text-[32px] w-[95%] work-card-para text-[#000000] leading-[140%] font-[Inter] font-[400]'>Select your college, hometown, and interests — so Afious can connect you with people you’ll actually want to meet.</p>
         </div>
-        <div className='bg-[#FFFFFF] absolute top-[110%]  cards2 z-[5] card-box py-[30px] work-2 px-[35px] border border-[1px] border-[#A6A6A6] rounded-[16px]'>
-            <h3 className='text-[#A6A6A6] font-[Lexend] work-card-heading leading-[124%] font-[700] text-[48px]'>Discover Students Nearby</h3>
+        <div className='bg-[#FFFFFF] absolute top-[110%]  cards2 z-[5] card-box py-[30px]   px-[35px] border border-[1px] border-[#A6A6A6] rounded-[16px]'>
+            <h3 className='text-[#A6A6A6] font-[Lexend] work-card-heading  leading-[124%] font-[700] text-[48px]'>Discover Students <span className='nearby'>Nearby</span></h3>
             <p className='mt-[20px] text-[32px] w-[95%] work-card-para text-[#000000] leading-[140%] font-[Inter] font-[400]'>Browse a curated list of students on your campus or from your country who share your vibe — no group invites, no spam.</p>
         </div>
         <div className='bg-[#FFFFFF] absolute top-[220%] z-[6] cards3 card-box py-[30px] work-3 px-[35px] border border-[1px] border-[#A6A6A6] rounded-[16px]'>
@@ -245,8 +309,12 @@ function page() {
       </div>
     </div>
     </div>
+    {/* ================= Faq section ============= */}
+    <div id='faq-id'>
         <Faq/>
-        <div className=' px-[100px] bottom-button-box pt-[100px] pb-[35px] '>
+    </div>
+    {/* ================= Faq section ============= */}
+        <div className=' px-[100px] bottom-button-box pt-[100px] pb-[120px] '>
         <WaitlistButton/>
         </div>
     </div>

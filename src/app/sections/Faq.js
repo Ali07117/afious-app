@@ -67,7 +67,7 @@ function Faq() {
     };
 
     return (
-        <div className='w-[100%] bg-[] faq-container pt-[20%]  faq-padding-container mt-[100px]'>
+        <div id="faqs" className='w-[100%] bg-[] faq-container pt-[20%]  faq-padding-container mt-[100px]'>
             <h2 className='px-[100px] faq-heading text-[#A6A6A6] font-[800] font-[Inter] text-[70px] leading-[98%]'>
                 Frequently Asked Questions
             </h2>
@@ -89,7 +89,7 @@ function Faq() {
                         {item.question}
                     </div>
                     {openIndex === index && (
-                        <p className='answer mt-[10px] text-[18px] font-[Inter]'>
+                        <p className='answer mt-[10px] text-[20px] font-[Inter]'>
                             {item.answer}
                         </p>
                     )}
@@ -113,7 +113,7 @@ function Faq() {
                         {item.question}
                     </div>
                     {openIndex === index + beforeSignupFaq.length && (
-                        <p className='answer mt-[10px] text-[18px] font-[Inter]'>
+                        <p className='answer mt-[10px] text-[20px] font-[Inter]'>
                             {item.answer}
                         </p>
                     )}
