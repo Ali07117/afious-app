@@ -373,6 +373,12 @@ width: 100%;
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .contact-headings{
+    font-size: 90px !important;
+    line-height: 100% !important;
+  }
+}
 @media screen and (max-width: 1000px) {
   .contact-headings{
     font-size: 4rem;
