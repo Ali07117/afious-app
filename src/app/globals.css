@@ -115,30 +115,6 @@ body {
   opacity: 1;
 }
 
-
-
-.ddd{
-  /* padding: 0px !important; */
-  /* padding-left: 0% !important; */
-  /* padding-right: 0% !important; */
-  /* margin: 0px !important; */
-  /* justify-content: center !important; */
-}
-
-/* .work-2, .work-3, .work-4 {
-  position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-
-}
-.work-1 {
-  position: relative;
-  z-index: 0;
-
-   relative z-0;
-} */
-
 /* responsive */
 @media screen and (max-width: 1000px) {.meeting-padding-container, .work-margin-container{padding-top: 70px !important; padding-bottom: 70px;} .faq-heading-padding{margin-top: 40px;} }
 @media screen and (max-width: 650px) { .card-box{padding-left: 10px; padding-right: 10px;} .meeting-padding-container, .work-margin-container{padding-top: 20px !important; padding-bottom: 20px !important;} .faq-heading-padding{margin-top: 20px;} .work-heading{padding-bottom: 20px;} }

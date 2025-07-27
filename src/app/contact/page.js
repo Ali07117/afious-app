@@ -12,7 +12,6 @@ function contact() {
           back
         </button>
       </Link>
-        {/* <div className='h-[100%] w-[100%] absolute top-[0px] left-[0px] z-[1] rotate-[180deg]'></div> */}
         <div className='flex contact-inner-wrapper gap-[8rem]'>
           <div className="contact-wrapper-left w-[50%]  z-[5] ">
             <p className=" font-noto font-[700] contact-headings text-[2vw] leading-[5vw]  text-[#A6A6A6]">Let’s work together</p>
