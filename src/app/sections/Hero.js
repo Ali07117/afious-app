@@ -10,7 +10,7 @@ function Hero() {
 
   return (
     <div
-      className=' h-[calc(98vh-90px)] bg-[] relative hero-main-container w-[100%] flex items-cennter justify-center'
+      className=' h-[calc(100vh-90px)] bg-[] relative hero-main-container w-[100%] flex items-cennter justify-center'
     >
 
       <div className='hero-text-container-main opacity-[0] absolute top-[15%] px-[3%] z-[-1]'>
@@ -22,15 +22,27 @@ function Hero() {
         <p className='font-[Lexend] font-[700] hero-para text-[2.8vw] mt-[40px]  leading-[124%] text-[#FFFFFF]'>Meet people who get you — from your school, your city, or halfway across the world. Afious helps international students connect through shared interests, hometowns, and campus life</p>
       </div>
       {/* <p className='text-[50px] font-bold absolute top-[200px] left-[300px] text-[white] z-[99]'>FFFFF</p> */}
-      <div className='relative ffdd flex mobile-hero-container overflow-hidden h-[100%] w-[98%]'>
+      <div className='relative ffdd flex mobile-hero-container overflow-hidden h-[100%] w-[100%]'>
+      <div className='h-[100%] overflow-hidden left-0 flex justify-center w-1/3 z-[98]'>
+        <div className='h-[100%] ffgg translate-x-[-110%] w-[50%] bg-[white] '></div>        
+        <div className='h-[100%] ffgg translate-x-[110%] w-[50%] bg-[white] '></div>        
+      </div>
+      <div className='h-[100%] overflow-hidden absolute left-1/3 flex bg-transparent justify-center w-1/3 z-[98]'>
+        <div className='h-[100%] ffgg translate-x-[-110%] w-[50%] bg-[white] '></div>
+        <div className='h-[100%] ffgg translate-x-[110%] w-[50%] bg-[white] '></div>
+      </div>
+      <div className='h-[100%] overflow-hidden absolute left-2/3 flex bg-transparent justify-center w-1/3 z-[98]'>
+        <div className='h-[100%] ffgg translate-x-[-110%] w-[50%] bg-[white] '></div>
+        <div className='h-[100%] ffgg translate-x-[110%] w-[50%] bg-[white] '></div>
+      </div>
 
         {/* <img className='rounded-[20px] w-[100%] hero-img opacity-[1] z-[] h-[100%] w-[100%]  object-cover' src="/images/full-hero.svg" alt="" /> */}
-        <div className='h-[100%] w-[10px] bg-[#FFFFFF] z-[99] white-bar1 opacity-[0] absolute top-[0px] left-1/3  '></div>
-        <div className='h-[100%] w-[10px] bg-[#FFFFFF] z-[99] white-bar2 opacity-[0] absolute top-[0px] right-1/3 '></div>
+        <div className='h-[100%] w-[0px] bg-[#FFFFFF] z-[99] white-bar1 opacity-[0] absolute top-[0px] left-1/3  '></div>
+        <div className='h-[100%] w-[0px] bg-[#FFFFFF] z-[99] white-bar2 opacity-[0] absolute top-[0px] right-1/3 '></div>
         <div className='w-[100%] h-[100%] absolute flex'>
           <div className='w-[100%] hidden-hero h-[100%] left-image'>
             <img
-              className='object-cover rounded-[20px] h-[100%] w-[100%]'
+              className='object-cover rounded-[0px] h-[100%] w-[100%]'
               src="/images/full-hero.svg"
               alt=""
             />

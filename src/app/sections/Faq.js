@@ -67,8 +67,8 @@ function Faq() {
     };
 
     return (
-        <div id="faqs" className='w-[100%] bg-[] faq-container pt-[20%]  faq-padding-container mt-[100px]'>
-            <h2 className='px-[100px] faq-heading text-[#A6A6A6] font-[800] font-[Inter] text-[70px] leading-[98%]'>
+        <div id="faqs" className='w-[100%] bg-[] faq-container pt-[]  faq-padding-container mt-[50vh]'>
+            <h2 className='px-[100px] pt-[100px] faq-heading text-[#A6A6A6] font-[800] font-[Inter] text-[70px] leading-[98%]'>
                 Frequently Asked Questions
             </h2>
 
@@ -82,14 +82,14 @@ function Faq() {
                     className='mx-[30px] faq-div px-[70px] border-b border-b-[#B6BDC6] border-b-[1px] py-[18px]'
                 >
                     <div
-                        className={`question font-[Inter] font-[800] text-[32px] leading-[98%] cursor-pointer ${openIndex === index ? 'text-[#2D404F]' : 'text-[#A6A6A6]'
+                        className={`question font-[Inter] hover:text-[#000] font-[800] duration-300 text-[32px] leading-[98%] cursor-pointer ${openIndex === index ? 'text-[#000]' : 'text-[#A6A6A6]'
                             }`}
                         onClick={() => toggle(index)}
                     >
                         {item.question}
                     </div>
                     {openIndex === index && (
-                        <p className='answer mt-[10px] text-[20px] font-[Inter]'>
+                        <p className='answer mt-[10px] text-[24px] font-[Inter]'>
                             {item.answer}
                         </p>
                     )}
@@ -106,14 +106,14 @@ function Faq() {
                     className='mx-[30px] faq-div px-[70px] border-b border-b-[#B6BDC6] border-b-[1px] py-[18px]'
                 >
                     <div
-                        className={`question font-[Inter] font-[800] text-[32px] leading-[98%] cursor-pointer ${openIndex === index + beforeSignupFaq.length ? 'text-[#2D404F]' : 'text-[#A6A6A6]'
+                        className={`question font-[Inter] font-[800] hover:text-[#000] text-[32px] duration-300 leading-[98%] cursor-pointer ${openIndex === index + beforeSignupFaq.length ? 'text-[#000]' : 'text-[#A6A6A6]'
                             }`}
                         onClick={() => toggle(index + beforeSignupFaq.length)}
                     >
                         {item.question}
                     </div>
                     {openIndex === index + beforeSignupFaq.length && (
-                        <p className='answer mt-[10px] text-[20px] font-[Inter]'>
+                        <p className='answer mt-[10px] text-[24px] font-[Inter]'>
                             {item.answer}
                         </p>
                     )}

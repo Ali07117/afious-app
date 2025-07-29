@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/all";
@@ -20,14 +20,40 @@ import Contact from './contact/page';
 
 gsap.registerPlugin(ScrollTrigger)
 function page() {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const scroll = new LocomotiveScroll();
-    }
-  }, []);
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
   const pathname = usePathname();
+  const scrollRef = useRef(null);
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     const scroll = new LocomotiveScroll();
+  //   }
+  // }, []);
+  useEffect(() => {
+    scrollRef.current = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+    });
+  
+    return () => {
+      scrollRef.current && scrollRef.current.destroy();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+      scrollRef.current && scrollRef.current.stop(); // 👈 stop LocomotiveScroll
+    } else {
+      document.body.style.overflow = '';
+      scrollRef.current && scrollRef.current.start(); // 👈 restart LocomotiveScroll
+    }
+  
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+ 
   useGSAP(() => {
     // gsap.set(".slidesline",{scale:10})
     var tl = gsap.timeline({
@@ -38,7 +64,8 @@ function page() {
         scrub: 2,
         // markers:true,
         start: "top top",
-        end: "bottom top",
+        // end: "bottom -200%",
+        end: "+=200%",
         pin: true
       }
 
@@ -46,38 +73,47 @@ function page() {
 
     tl.to(".white-bar1", {
       opacity: 1,
+      width:"10px",
     }, "1")
     tl.to(".white-bar2", {
       opacity: 1,
+      width:"10px",
     }, "1")
+    tl.to(".ffgg", {
+      translateX: "0%",
+      duration: 1, 
+    }, "2");
     tl.to(".left-image", {
-      // translateY: "-100%",
       opacity: 0,
-      duration: 2,
-    }, "2")
+      // duration: 0.1,
+    }, "3")
     tl.to(".right-image", {
-      // translateY: "-100%",
       opacity: 0,
-      duration: 2,
-    }, "2")
+      // duration: 0.5,
+    }, "3")
     tl.to(".center-image", {
-      // translateY: "100%",
       opacity: 0,
-      duration: 2,
-      // delay: 0,
-    }, "2")
+      // duration: 0.5,
+    }, "3")
     tl.to(".white-bar1", {
       opacity: 0,
-    }, "2")
+      // duration: -2,
+    }, "3")
     tl.to(".white-bar2", {
       opacity: 0,
-    }, "2")
+      // duration: -2,
+    }, "3")
+    tl.to(".ffgg", {
+      opacity: 0,
+    }, "4");
+    
     tl.to(".hero-text-container-main-2", {
       opacity: 0,
-    }, "2")
+    }, "4")
     tl.to(".hero-text-container-main", {
       opacity: 1,
-    }, "2")
+      duration:2,
+    }, "4")
     //    ----------craft--------
     var tl2 = gsap.timeline({
 
@@ -188,7 +224,7 @@ function page() {
 
     <>
       {/* <Contact open2={open2} setOpen2={setOpen2}/> */}
-      <div className={` ${open ? " translate-x-[0%]" : " translate-x-[-200%]"} duration-500 fixed top-0 left-0 w-full h-screen bg-[#FFFFFF] z-[101]`}>
+      <div data-scroll-container className={` ${open ? " translate-x-[0%]" : " translate-x-[-200%]"} duration-500 fixed top-0 left-0 w-full h-screen bg-[#FFFFFF] z-[101]`}>
         <div className='flex justify-between nav-cross-container px-[80px] py-[70px]'>
           <div></div>
           <button className='font-[notoo] hover:text-[#2AFF39] duration-500 hover:bg-[#000000] nav-cross  text-[32px] font-[700] text-[#000000] bg-[#2AFF39] rounded-[40px] border-[0px] outline-[0px] px-[30px] py-[0px]' onClick={() => { setOpen(!open) }}>
@@ -217,27 +253,29 @@ function page() {
               <p className={`font-[Inter] nav-text font-[700] text-[70px] text-[#A6A6A6] ${pathname === "/contact" ? 'text-[#A6A6A6]' : ' text-[#000]'} `}>Contact</p>
             </span>
           </Link>
+          <a target='blank' href="https://docs.google.com/forms/d/e/1FAIpQLScl1PE74kCRc6xnztjE4H8qwJuaoReWYvR6hbxPf4pK5Aqs1w/viewform?usp=dialog">
           <button className='text-[#2AFF39] nav-text nav-button font-[Inter] translate-x-[-5%] font-[700] text-[70px] hover:text-[#000000] hover:bg-[#2AFF39]  duration-500 bg-[#000000] rounded-[100px] px-[40px]'>Join the Waitlist</button>
+          </a>
         </div>
       </div>
       <div id='hero' className="main w-full w-[100%] overflow-hidden " >
         {/* <BottomBar open={open} setopen={setOpen} /> */}
         {/* ============== Bottom Bar ============== */}
-        <div className='fixed bottom-[20px] bottom-bar-container top-[88vh] flex items-center left-[50%] translate-x-[-50%] z-[100] h-[70px] rounded-[16px] border border-[1px] border-[#A6A6A6] bg-[#FFFFFF]  w-[95%]'>
+        <div className='fixed bottom-bar-shadow bottom-[20px] bottom-bar-container top-[calc(100vh-90px)]  flex items-center left-[50%] translate-x-[-50%] z-[100] h-[70px] rounded-[16px] border border-[1px] border-[#A6A6A6] bg-[#FFFFFF]  w-[96.5%]'>
 
           <div className='w-[70px] bottom-bar-icon bg-[#2AFF39] flex items-center justify-center h-[100%] rounded-l-[15px]'>
             <img className='cursor-pointer bottom-bar-img h-[40%]' src="/images/baricon.svg" alt="" onClick={() => { setOpen(!open) }} />
           </div>
           <div className='h-[100%] flex-1 flex px-[6%] bottom-bar-text-box items-center justify-between'>
-            <p className='bottom-bar-button-box bottom-bar-text link-non-active'><ScrollLink to="what" spy smooth activeClass={"link-active"}>What</ScrollLink></p>
-            <p className='bottom-bar-button-box bottom-bar-text link-non-active'><ScrollLink to="how-it-work" spy smooth activeClass={"link-active"}> <span className='work-text-visible'>How It works</span> <span className='work-text-hidden'>Works</span></ScrollLink></p>
-            <p className='bottom-bar-button-box bottom-bar-text link-non-active'><ScrollLink to="faq-id" spy smooth offset={300} activeClass={"link-active"}>FAQs</ScrollLink></p>
+            <p className='bottom-bar-button-box cursor-pointer bottom-bar-text link-non-active'><ScrollLink to="what" spy smooth activeClass={"link-active"}>What</ScrollLink></p>
+            <p className='bottom-bar-button-box cursor-pointer bottom-bar-text link-non-active'><ScrollLink to="how-it-work" spy smooth activeClass={"link-active"}> <span className='work-text-visible'>How It works</span> <span className='work-text-hidden'>Works</span></ScrollLink></p>
+            <p className='bottom-bar-button-box cursor-pointer bottom-bar-text link-non-active'><ScrollLink to="faq-id" spy smooth activeClass={"link-active"}>FAQs</ScrollLink></p>
 
             {/* <p className='font-[Inter] font-[800] faqs-text bottom-bar-text text-[32px] leading-[100%] text-[#A6A6A6]'>FAQs</p> */}
           </div>
         </div>
         <div className="circle-animation" >
-          <div className="home section w-full h-[100vh] relative bg-[white] text-[white]" >
+          <div className="home section section-home px-[1%] w-full h-[100vh] relative bg-[white] text-[white]" >
 
             <Navbar />
 
@@ -268,7 +306,7 @@ function page() {
             </div>
 
           </div>
-          <div className=' py-[100px] meeting-padding-container meeting-box flex border-b border-b-[1px] border-b-[#A6A6A6]'>
+          <div className=' py-[100px] meeting-padding-container meeting-box flex '>
             <div className="meeting-left pt-[3%] w-[50%] bg-[]">
               <h2 className='text-[42px] font-[700] meeting-heading font-[Lexend] leading-[122%] text-[#A6A6A6]'>Your Circle Starts Here</h2>
               <p className='font-[Inter]  meeting-para mt-[60px] text-[32px] text-[#000000] leading-[100%]'>Go from “I don’t know anyone” to “These are my people.” Chat 1-on-1 or grow your own crew — all within one welcoming space.</p>
@@ -290,15 +328,15 @@ function page() {
                 <h3 className='text-[#A6A6A6] font-[Lexend] work-card-heading leading-[124%] font-[700] text-[48px]'>Choose What Matters to You</h3>
                 <p className='mt-[20px] text-[32px] w-[95%] work-card-para text-[#000000] leading-[140%] font-[Inter] font-[400]'>Select your college, hometown, and interests — so Afious can connect you with people you’ll actually want to meet.</p>
               </div>
-              <div className='bg-[#FFFFFF] absolute top-[110%]  cards2 z-[5] card-box py-[30px]   px-[35px] border border-[1px] border-[#A6A6A6] rounded-[16px]'>
+              <div className='bg-[#FFFFFF] absolute top-[115%]  cards2 z-[5] card-box py-[30px]   px-[35px] border border-[1px] border-[#A6A6A6] rounded-[16px]'>
                 <h3 className='text-[#A6A6A6] font-[Lexend] work-card-heading  leading-[124%] font-[700] text-[48px]'>Discover Students <span className='nearby'>Nearby</span></h3>
                 <p className='mt-[20px] text-[32px] w-[95%] work-card-para text-[#000000] leading-[140%] font-[Inter] font-[400]'>Browse a curated list of students on your campus or from your country who share your vibe — no group invites, no spam.</p>
               </div>
-              <div className='bg-[#FFFFFF] absolute top-[220%] z-[6] cards3 card-box py-[30px] work-3 px-[35px] border border-[1px] border-[#A6A6A6] rounded-[16px]'>
+              <div className='bg-[#FFFFFF] absolute top-[230%] z-[6] cards3 card-box py-[30px] work-3 px-[35px] border border-[1px] border-[#A6A6A6] rounded-[16px]'>
                 <h3 className='text-[#A6A6A6] font-[Lexend] work-card-heading leading-[124%] font-[700] text-[48px]'>Start a Conversation</h3>
                 <p className='mt-[20px] text-[32px] w-[95%] work-card-para text-[#000000] leading-[140%] font-[Inter] font-[400]'>Say hi with confidence. Shared interests make it easier to chat naturally and skip the awkward intros.</p>
               </div>
-              <div className='bg-[#FFFFFF] absolute top-[330%] z-[7] cards4 card-box py-[30px] work-4 px-[35px] border border-[1px] border-[#A6A6A6] rounded-[16px]'>
+              <div className='bg-[#FFFFFF] absolute top-[345%] z-[7] cards4 card-box py-[30px] work-4 px-[35px] border border-[1px] border-[#A6A6A6] rounded-[16px]'>
                 <h3 className='text-[#A6A6A6] font-[Lexend] work-card-heading leading-[124%] font-[700] text-[48px]'>Build Your Circle</h3>
                 <p className='mt-[20px] text-[32px] w-[95%] work-card-para text-[#000000] leading-[140%] font-[Inter] font-[400]'>Whether it’s one close friend or your entire crew, keep the convo going — group chats and events make it easy to grow your community.</p>
               </div>
@@ -310,8 +348,10 @@ function page() {
           <Faq />
         </div>
         {/* ================= Faq section ============= */}
-        <div className=' px-[100px] bottom-button-box pt-[100px] pb-[120px] '>
+        <div className=' px-[100px] bottom-button-box py-[100px] pb-[150px] '>
+        <a target='blank' href="https://docs.google.com/forms/d/e/1FAIpQLScl1PE74kCRc6xnztjE4H8qwJuaoReWYvR6hbxPf4pK5Aqs1w/viewform?usp=dialog">
           <WaitlistButton />
+        </a>
         </div>
       </div>
 

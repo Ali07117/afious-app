@@ -115,23 +115,25 @@ body {
   opacity: 1;
 }
 
+.bottom-bar-shadow{box-shadow: 0px 4px 27.2px rgba(0, 0, 0, 0.2);}
+
 /* responsive */
-@media screen and (max-width: 1000px) {.meeting-padding-container, .work-margin-container{padding-top: 70px !important; padding-bottom: 70px;} .faq-heading-padding{margin-top: 40px;} }
-@media screen and (max-width: 650px) { .card-box{padding-left: 10px; padding-right: 10px;} .meeting-padding-container, .work-margin-container{padding-top: 20px !important; padding-bottom: 20px !important;} .faq-heading-padding{margin-top: 20px;} .work-heading{padding-bottom: 20px;} }
+@media screen and (max-width: 1000px) {.meeting-padding-container, .faq-container, .work-margin-container{padding-top: 70px !important; padding-bottom: 70px;} .faq-heading-padding{margin-top: 40px;} }
+@media screen and (max-width: 650px) { .card-box{padding-left: 10px; padding-right: 10px;} .meeting-padding-container, .faq-container, .work-margin-container{padding-top: 20px !important; padding-bottom: 20px !important;} .faq-heading-padding{margin-top: 20px;} .work-heading{padding-bottom: 20px;} }
 /* @media screen and (max-width: 510px) {.faq-container{padding-top: 25%;} } */
 /* @media screen and (max-width: 465px) {.faq-container{padding-top: 30%;} } */
 /* @media screen and (max-width: 435px) {.faq-container{padding-top: 35%;} } */
 @media screen and (max-width: 412px) {.work-card-heading, .sss{overflow: hidden !important; text-overflow: ellipsis !important; text-wrap: nowrap !important;} }
 
 /* @media screen and (max-width: 600px) { .bottom-bar-container{top: 93vh;} } */
-@media screen and (max-width: 1000px) { .mobile-hero-container{height: 100vh;} .hidden-hero{display:inline-block;} .white-bar1, .white-bar2{display: none;} .hero-visible{display: none;} }
+@media screen and (max-width: 1000px) { .nav-container{padding-left: 1%; padding-right: 1%;} .section-home{padding-left: 0%; padding-right: 0%;} .mobile-hero-container{height: 100vh; width: 100%;} .hidden-hero{display:inline-block;} .white-bar1, .white-bar2{width: 5px !important;} .hero-visible{display: none;} }
 @media screen and (min-width: 1000px) {.hidden-hero{display: none;} .hero-visible{display: inline-block;} }
 @media screen and (max-width: 1250px) {.hero-heading{font-size: 130px;} .hero-para{font-size: 38px;} }
 @media screen and (max-width: 1000px) {.hero-heading{font-size: 120px;} .hero-para{font-size: 32px; margin-top: 30px; line-height: 110%;} }
 @media screen and (max-width: 900px) {.hero-heading{font-size: 110px;} .hero-para{font-size: 30px; line-height: 110%;} }
 @media screen and (max-width: 805px) {.hero-heading{font-size: 100px;} .hero-para{font-size: 28px; line-height: 110%;} }
 @media screen and (max-width: 730px) {.hero-heading{font-size: 90px;} .hero-para{font-size: 26px; line-height: 110%;} }
-@media screen and (max-width: 660px) {.hero-heading{font-size: 70px; text-align: center;} .hero-para{font-size: 25px; margin-top: 20px; line-height: 110%; text-align: center;} }
+@media screen and (max-width: 660px) {.hero-heading{font-size: 70px; } .hero-para{font-size: 25px; margin-top: 20px; line-height: 110%; } }
 @media screen and (max-width: 1200px) {.white-bar1, .white-bar2{width: 8px;} }
 @media screen and (max-width: 800px) {.white-bar1, .white-bar2{width: 6px;} }
 @media screen and (max-width: 950px) {.hero-main-container{height: 600px;} }
@@ -144,15 +146,15 @@ body {
 /* bottom bar */
 
 @media screen and (max-width: 1100px) {.bottom-bar-container{height: 60px;} .bottom-bar-text, .link-active{font-size: 28px;} .bottom-bar-button-box, .link-active{padding-top: 6px; padding-bottom: 6px;} }
-@media screen and (max-width: 1000px) {.nav-container{padding-left: 20px; padding-right: 20px;}}
+/* @media screen and (max-width: 1000px) {.nav-container{padding-left: 20px; padding-right: 20px;}} */
 @media screen and (max-width: 780px) {.bottom-bar-container{height: 55px;} .bottom-bar-text, .link-active{font-size: 25px;} .bottom-bar-button-box, .link-active{padding: 4px 22px;} }
 @media screen and (max-width: 650px) {.bottom-bar-container{height: 50px;} .bottom-bar-text, .link-active{font-size: 22px;} .bottom-bar-button-box, .link-active{padding: 2px 10px;} .nav-text-container{display: inline-flex; flex-direction: column; gap: 10px; } }
 @media screen and (max-width: 500px) {.bottom-bar-text-box{justify-content: space-between; padding-right: 10px;} .what-text, .faqs-text{display: none;} }
 
 /* bottom bar */
 
-@media screen and (max-width: 1100px) {.web-logo{height: 40px;} .nav-container{height: 90px;} .wait-list-button{font-size: 16px; padding: 22px 25px;} }
-@media screen and (max-width: 780px) {.web-logo{height: 36px;} .nav-container{height: 80px; padding-left: 15px; padding-right: 15px;} .wait-list-button{font-size: 16px;} }
+@media screen and (max-width: 1100px) {.web-logo{height: 40px;} .nav-container{height: 90px;} .wait-list-button{font-size: 16px;} }
+@media screen and (max-width: 780px) {.web-logo{height: 36px;} .nav-container{height: 80px;} .wait-list-button{font-size: 16px;} }
 @media screen and (max-width: 1000px) {.nav-text-box{margin-left: 40px;} .nav-cross-container{padding-left: 40px; padding-right: 40px;} .arrow-container{gap: 50px; align-items: center;} .nav-arrow{height: 35px;} .nav-text{font-size: 55px;} .nav-cross{font-size: 28px;} .nav-button{ margin-left: 20px;} }
 @media screen and (max-width: 700px) {.nav-text-box{margin-left: 20px;} .nav-cross-container{padding-left: 20px; padding-right: 20px;} .arrow-container{gap: 40px; align-items: center;} .nav-arrow{height: 30px;}  .nav-text{font-size: 45px;} .nav-cross{font-size: 25px;} .nav-button{ margin-left: 10px;} }
 @media screen and (max-width: 600px) {.nav-text-box{margin-left: 20px;}  .arrow-container{gap: 20px; align-items: center;} .nav-arrow{height: 20px;} .nav-text{font-size: 35px;} .nav-cross{font-size: 20px;} .nav-button{ margin-left: 10px;} }
@@ -171,8 +173,8 @@ body {
 
 @media screen and (max-width: 1250px) { .meeting-container{padding-left: 40px; padding-right:40px ;} .meeting-para{font-size: 28px; margin-top: 40px;} .meeting-heading{font-size: 38px;} .meeting-img{height: 300px;}}
 @media screen and (max-width: 1100px) { .meeting-container{padding-left: 20px; padding-right:20px ;} .meeting-para{font-size: 22px; margin-top: 30px; line-height: 105%;} .meeting-heading{font-size: 30px;} .meeting-img{height: 250px;}}
-@media screen and (max-width: 850px) {.meeting-box{flex-direction: column; gap: 30px;} .meeting-para{margin-top: 15px; font-size: 22px;} .meeting-heading{font-size: 32px;} .meeting-left, .meeting-right{width: 100%; text-align: center;}}
-@media screen and (max-width: 600px) {.meeting-box{flex-direction: column; gap: 30px;} .meeting-para{margin-top: 10px; font-size: 18px;} .meeting-heading{font-size: 28px;} .meeting-left, .meeting-right{width: 100%; text-align: center;}}
+@media screen and (max-width: 850px) {.meeting-box{flex-direction: column; gap: 30px;} .meeting-para{margin-top: 15px; font-size: 22px;} .meeting-heading{font-size: 32px;} .meeting-left, .meeting-right{width: 100%; }}
+@media screen and (max-width: 600px) {.meeting-box{flex-direction: column; gap: 30px;} .meeting-para{margin-top: 10px; font-size: 18px;} .meeting-heading{font-size: 28px;} .meeting-left, .meeting-right{width: 100%; }}
 
 /* meeting section */
 
@@ -181,8 +183,8 @@ body {
 @media screen and (max-width: 1480px) {.work-heading{font-size: 50px;} .work-card-heading{font-size: 38px;} .work-card-para{font-size: 28px; margin-top: 10px;} .card-box{padding: 25px 30px;}}
 @media screen and (max-width: 1250px) { .work-container{padding-left: 40px; padding-right:40px;} }
 @media screen and (max-width: 1100px) { .work-container{padding-left: 20px; padding-right:20px;} .work-heading{font-size: 40px;} .work-card-heading{font-size: 30px;} .work-card-para{font-size: 22px; margin-top: 10px;} .card-box{padding: 20px 25px;} .work-box-right{gap: 25px;}}
-@media screen and (max-width: 850px) { .work-container{padding-left: 20px; padding-right:20px;} .work-heading{font-size: 40px;} .work-card-heading{font-size: 32px;} .work-card-para{font-size: 22px;} .work-container{flex-direction: column; text-align: center;} .work-left, .work-box-right{width: 100%;}}
-@media screen and (max-width: 600px) { .work-container{padding-left: 20px; padding-right:20px;} .work-heading{font-size: 32px;} .work-card-heading{font-size: 28px;} .work-card-para{font-size: 18px; width: 100%;} .work-container{flex-direction: column; text-align: center;} .card-box{padding: 20px 10px;}  .work-left, .work-box-right{width: 100%;}}
+@media screen and (max-width: 850px) { .work-container{padding-left: 20px; padding-right:20px;} .work-heading{font-size: 40px;} .work-card-heading{font-size: 32px;} .work-card-para{font-size: 22px;} .work-container{flex-direction: column; } .work-left, .work-box-right{width: 100%;}}
+@media screen and (max-width: 600px) { .work-container{padding-left: 20px; padding-right:20px;} .work-heading{font-size: 32px;} .work-card-heading{font-size: 28px;} .work-card-para{font-size: 18px; width: 100%;} .work-container{flex-direction: column; } .card-box{padding: 20px 10px;}  .work-left, .work-box-right{width: 100%;}}
 @media screen and (max-width: 490px) { .work-card-heading{font-size: 24px;} .work-card-para{font-size: 16px;} .card-box{padding: 10px 10px;} }
 @media screen and (max-width: 390px) { .nearby{display: none;} }
 /* work section */
@@ -191,10 +193,15 @@ body {
 /* faq section */
 @media screen and (max-width: 1480px) {.faq-heading{font-size: 50px;}}
 @media screen and (max-width: 1250px) { .faq-heading{font-size: 40px; padding-left: 40px; padding-right: 40px;} .question{font-size: 28px;} .before-signing, .after-signing{font-size: 28px; padding-left: 40px; padding-right: 40px;} .faq-div{padding-left: 0px; padding-right: 0px; margin-left: 40px; margin-right: 40px;}}
-@media screen and (max-width: 1100px) { .faq-heading{font-size: 40px; padding-left: 40px; padding-right: 40px;} .before-signing, .after-signing{font-size: 28px; padding-left: 20px; padding-right: 20px;}  .faq-div{padding-top: 10px; padding-bottom: 10px; margin-left: 20px; margin-right: 20px;} .question{font-size: 22px; font-weight: 600;} .before-signing, .after-signing{font-size: 22px;}}
-@media screen and (max-width: 850px) { .faq-heading{font-size: 40px; text-align: center; line-height: 120%;} .before-signing, .after-signing{font-size: 18px;}}
+@media screen and (max-width: 1100px) { .faq-heading{font-size: 40px; padding-left: 20px; padding-right: 20px;} .before-signing, .after-signing{font-size: 28px; padding-left: 20px; padding-right: 20px;}  .faq-div{padding-top: 10px; padding-bottom: 10px; margin-left: 20px; margin-right: 20px;} .question{font-size: 22px; font-weight: 600;} .before-signing, .after-signing{font-size: 22px;}}
+@media screen and (max-width: 1000px) {.faq-heading{padding-top: 50px;}}
+@media screen and (max-width: 850px) { .faq-heading{font-size: 40px; padding-top: 0px;  line-height: 120%;} .before-signing, .after-signing{font-size: 18px;}}
 @media screen and (max-width: 600px) { .faq-heading{font-size: 32px; margin-top: 20px; margin-bottom: 20px;} .question{font-size: 18px; font-weight: 600;} .answer{font-size: 15px;} .before-signing, .after-signing{font-size: 16px;}}
 
+
+
+@media screen and (max-width: 1000px) { .faq-container{margin-top: 35vh;}}
+@media screen and (max-width: 600px) { .faq-container{margin-top: 25vh;}}
 /* faq section */
 
 @media screen and (max-width: 1250px) { .bottom-button-box{padding-left: 40px; padding-right: 40px;} }
