@@ -1,6 +1,6 @@
 'use client';
-import React, { useState } from 'react';
-
+// import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 const beforeSignupFaq = [
     {
         question: "What is Afious?",
@@ -61,20 +61,57 @@ const afterSignupFaq = [
 
 function Faq() {
     const [openIndex, setOpenIndex] = useState(null);
+    const lastScrollY = useRef(0);
+    const scrollUpDistance = useRef(0);
+    const timeoutRef = useRef(null);
 
     const toggle = (index) => {
         setOpenIndex(openIndex === index ? null : index);
+        scrollUpDistance.current = 0; // reset on toggle
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            const scrollDifference = lastScrollY.current - currentScrollY;
+
+            if (scrollDifference > 0 && openIndex !== null) {
+                // User is scrolling up
+                scrollUpDistance.current += scrollDifference;
+
+                // If scrolled up more than 20% of screen height
+                if (scrollUpDistance.current > window.innerHeight * 1) {
+                    // Smooth delay before closing
+                    clearTimeout(timeoutRef.current);
+                    timeoutRef.current = setTimeout(() => {
+                        setOpenIndex(null);
+                        scrollUpDistance.current = 0; // reset after closing
+                    }, 300); // 300ms delay
+                }
+            } else {
+                // Reset if scrolling down
+                scrollUpDistance.current = 0;
+            }
+
+            lastScrollY.current = currentScrollY;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            clearTimeout(timeoutRef.current);
+        };
+    }, [openIndex]);
 
     return (
         <div id="faqs" className='w-[100%] bg-[] faq-container pt-[]  faq-padding-container mt-[50vh]'>
-            <h2 className='px-[100px] pt-[100px] faq-heading text-[#A6A6A6] font-[800] font-[Inter] text-[70px] leading-[98%]'>
+            <h2 className='px-[100px] py-[100px] faq-heading text-[#A6A6A6] font-[800] font-[Inter] text-[70px] leading-[98%]'>
                 Frequently Asked Questions
             </h2>
 
-            <p className="px-[100px] before-signing underline mb-[20px] faq-heading-padding mt-[60px] underline-offset-[8px] text-[32px] font-[500] font-[Inter] text-[#000000]">
+            {/* <p className="px-[100px] before-signing underline mb-[20px] faq-heading-padding mt-[60px] underline-offset-[8px] text-[32px] font-[500] font-[Inter] text-[#000000]">
                 Before Signing Up
-            </p>
+            </p> */}
 
             {beforeSignupFaq.map((item, index) => (
                 <div
@@ -96,9 +133,9 @@ function Faq() {
                 </div>
             ))}
 
-            <p className="px-[100px] after-signing faq-heading-padding underline mb-[20px] mt-[60px] after-signing-up underline-offset-[8px] text-[32px] font-[500] font-[Inter] text-[#000000]">
+            {/* <p className="px-[100px] after-signing faq-heading-padding underline mb-[20px] mt-[60px] after-signing-up underline-offset-[8px] text-[32px] font-[500] font-[Inter] text-[#000000]">
                 After Signing Up
-            </p>
+            </p> */}
 
             {afterSignupFaq.map((item, index) => (
                 <div

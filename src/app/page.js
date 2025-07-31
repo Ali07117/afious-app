@@ -233,24 +233,24 @@ function page() {
         </div>
         <div className='ml-[180px] nav-text-container nav-text-box'>
           <span className='flex items-center gap-[30px] cursor-pointer' >
-            <p className='nav-text hidden-section-default-text'><ScrollLink to="what" onClick={() => { setOpen(!open) }} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>What</ScrollLink></p>
-            <ScrollLink to="what" onClick={() => { setOpen(!open) }} spy smooth activeClass="active-arrow"> <img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink>
+            <p className='nav-text hidden-section-default-text hover:text-[#000] duration-300'><ScrollLink to="what" onClick={() => { setOpen(!open) }} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>What</ScrollLink></p>
+            {/* <ScrollLink to="what" onClick={() => { setOpen(!open) }} spy smooth activeClass="active-arrow"> <img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink> */}
           </span>
           <span className='flex items-center gap-[30px] cursor-pointer' >
-            <p className='nav-text hidden-section-default-text'><ScrollLink to="how-it-work" onClick={() => { setOpen(!open) }} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>How It Works</ScrollLink></p>
-            <ScrollLink to="how-it-work" onClick={() => { setOpen(!open) }} spy smooth activeClass="active-arrow"> <img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink>
+            <p className='nav-text hidden-section-default-text hover:text-[#000] duration-300'><ScrollLink to="how-it-work" onClick={() => { setOpen(!open) }} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>How It Works</ScrollLink></p>
+            {/* <ScrollLink to="how-it-work" onClick={() => { setOpen(!open) }} spy smooth activeClass="active-arrow"> <img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink> */}
           </span>
           <span className='flex items-center gap-[30px] cursor-pointer'>
-            <p className='nav-text hidden-section-default-text'><ScrollLink to="faq-id" onClick={() => { setOpen(!open) }} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>FAQs</ScrollLink></p>
-            <ScrollLink to="faq-id" onClick={() => { setOpen(!open) }} spy smooth activeClass="active-arrow"> <img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink>
+            <p className='nav-text hidden-section-default-text hover:text-[#000] duration-300'><ScrollLink to="faq-id" onClick={() => { setOpen(!open) }} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>FAQs</ScrollLink></p>
+            {/* <ScrollLink to="faq-id" onClick={() => { setOpen(!open) }} spy smooth activeClass="active-arrow"> <img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink> */}
           </span>
           <span className='flex items-center gap-[30px]'>
-            <p className='font-[Inter] nav-text font-[700] text-[70px] text-[#A6A6A6]'>Blog</p>
+            <p className='font-[Inter] nav-text font-[700] hover:text-[#000] duration-300 text-[70px] text-[#A6A6A6]'>Blog</p>
 
           </span>
           <Link href="/contact">
             <span className='flex items-center gap-[30px]'>
-              <p className={`font-[Inter] nav-text font-[700] text-[70px] text-[#A6A6A6] ${pathname === "/contact" ? 'text-[#A6A6A6]' : ' text-[#000]'} `}>Contact</p>
+              <p className={`font-[Inter] nav-text font-[700] hover:text-[#000] duration-300 text-[70px] text-[#A6A6A6] ${pathname === "/contact" ? 'text-[#A6A6A6]' : ' text-[#000]'} `}>Contact</p>
             </span>
           </Link>
           <a target='blank' href="https://docs.google.com/forms/d/e/1FAIpQLScl1PE74kCRc6xnztjE4H8qwJuaoReWYvR6hbxPf4pK5Aqs1w/viewform?usp=dialog">
