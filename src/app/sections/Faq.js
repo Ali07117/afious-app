@@ -126,7 +126,7 @@ function Faq() {
                         {item.question}
                     </div>
                     {openIndex === index && (
-                        <p className='answer mt-[10px] text-[20px] font-[Inter]'>
+                        <p className='answer mt-[10px] font-[700] text-[20px] font-[Inter]'>
                             {item.answer}
                         </p>
                     )}
@@ -150,7 +150,7 @@ function Faq() {
                         {item.question}
                     </div>
                     {openIndex === index + beforeSignupFaq.length && (
-                        <p className='answer mt-[10px] text-[20px] font-[Inter]'>
+                        <p className='answer mt-[10px] font-[700] text-[20px] font-[Inter]'>
                             {item.answer}
                         </p>
                     )}
