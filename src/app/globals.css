@@ -221,7 +221,7 @@ body {
 @media screen and (max-width: 1100px) { .work-container{padding-left: 20px; padding-right:20px;} .work-heading{font-size: 40px;} .work-card-heading{font-size: 30px;} .work-card-para{font-size: 22px; margin-top: 10px;} .card-box{padding: 20px 25px;} .work-box-right{gap: 25px;}}
 @media screen and (max-width: 850px) { .work-container{padding-left: 20px; padding-right:20px;} .work-heading{font-size: 40px;} .work-card-heading{font-size: 32px;} .work-card-para{font-size: 22px;} .work-container{flex-direction: column; } .work-left, .work-box-right{width: 100%;}}
 @media screen and (max-width: 600px) { .work-container{padding-left: 20px; padding-right:20px;} .work-heading{font-size: 32px;} .work-card-heading{font-size: 28px;} .work-card-para{font-size: 18px; width: 100%;} .work-container{flex-direction: column; } .card-box{padding: 20px 10px;}  .work-left, .work-box-right{width: 100%;}}
-@media screen and (max-width: 490px) { .work-card-heading{font-size: 24px;} .work-card-para{font-size: 16px;} .card-box{padding: 10px 10px;} }
+@media screen and (max-width: 490px) {  .work-card-para{font-size: 16px;} .card-box{padding: 10px 10px;} }
 @media screen and (max-width: 390px) { .nearby{display: none;} }
 /* work section */
 

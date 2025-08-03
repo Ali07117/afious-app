@@ -105,7 +105,7 @@ function Faq() {
 
     return (
         <div id="faqs" className='w-[100%] bg-[] faq-container pt-[]  faq-padding-container mt-[50vh]'>
-            <h2 className='px-[100px] py-[100px] faq-heading text-[#A6A6A6] font-[800] font-[Inter] text-[70px] leading-[98%]'>
+            <h2 className='px-[100px] py-[100px] faq-heading text-[#A6A6A6] font-[800] font-[Inter] text-[72px] leading-[98%]'>
                 Frequently Asked Questions
             </h2>
 
