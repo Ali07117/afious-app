@@ -68,9 +68,9 @@ function page() {
         end: "+=200%",
         pin: true
       }
-
+      
     })
-
+    
     tl.to(".white-bar1", {
       opacity: 1,
       width:"10px",
@@ -80,40 +80,44 @@ function page() {
       width:"10px",
     }, "1")
     tl.to(".ffgg", {
-      translateX: "0%",
+      // translateX: "0%",
+      opacity: 0,
       duration: 1, 
     }, "2");
+    tl.to(".hero-text-container-main-2", {
+      opacity: 0,
+    }, "2")
     tl.to(".left-image", {
       opacity: 0,
       // duration: 0.1,
-    }, "3")
+    }, "2")
     tl.to(".right-image", {
       opacity: 0,
       // duration: 0.5,
-    }, "3")
+    }, "2")
     tl.to(".center-image", {
       opacity: 0,
       // duration: 0.5,
-    }, "3")
+    }, "2")
     tl.to(".white-bar1", {
       opacity: 0,
       // duration: -2,
-    }, "3")
+    }, "2")
     tl.to(".white-bar2", {
       opacity: 0,
       // duration: -2,
-    }, "3")
-    tl.to(".ffgg", {
-      opacity: 0,
-    }, "4");
+    }, "2")
+    // tl.to(".ffgg", {
+    //   opacity: 0,
+    // }, "4");
     
-    tl.to(".hero-text-container-main-2", {
-      opacity: 0,
-    }, "4")
-    tl.to(".hero-text-container-main", {
-      opacity: 1,
-      duration:2,
-    }, "4")
+    // tl.to(".hero-text-container-main-2", {
+    //   opacity: 0,
+    // }, "4")
+    // tl.to(".hero-text-container-main", {
+    //   opacity: 1,
+    //   duration:2,
+    // }, "4")
     //    ----------craft--------
     var tl2 = gsap.timeline({
 
@@ -121,7 +125,7 @@ function page() {
         trigger: ".craft-section",
         scrub: true,
         start: "top 0%",
-        end: "top -150% ",
+        end: "top -300% ",
         pin: true,
       },
 
@@ -225,36 +229,36 @@ function page() {
     <>
       {/* <Contact open2={open2} setOpen2={setOpen2}/> */}
       <div data-scroll-container className={` ${open ? " translate-x-[0%]" : " translate-x-[-200%]"} duration-500 fixed top-0 left-0 w-full h-screen bg-[#FFFFFF] z-[101]`}>
-        <div className='flex justify-between nav-cross-container px-[80px] py-[70px]'>
+        <div className='flex justify-between nav-cross-container px-[80px] py-[50px]'>
           <div></div>
-          <button className='font-[notoo] hover:text-[#2AFF39] duration-500 hover:bg-[#000000] nav-cross  text-[32px] font-[700] text-[#000000] bg-[#2AFF39] rounded-[40px] border-[0px] outline-[0px] px-[30px] py-[0px]' onClick={() => { setOpen(!open) }}>
+          <button className='font-[notoo] hover:text-[#2AFF39] duration-500 hover:bg-[#000000] nav-cross  text-[24px] font-[700] text-[#000000] bg-[#2AFF39] rounded-[40px] border-[0px] outline-[0px] px-[24px] py-[0px]' onClick={() => { setOpen(!open) }}>
             Close X
           </button>
         </div>
         <div className='ml-[180px] nav-text-container nav-text-box'>
           <span className='flex items-center gap-[30px] cursor-pointer' >
-            <p className='nav-text hidden-section-default-text hover:text-[#000] duration-300'><ScrollLink to="what" onClick={() => { setOpen(!open) }} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>What</ScrollLink></p>
+            <p className='nav-text hidden-section-default-text nav-textt hover:text-[#000] duration-300'><ScrollLink to="what" onClick={() => { setOpen(!open) }} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>What</ScrollLink></p>
             {/* <ScrollLink to="what" onClick={() => { setOpen(!open) }} spy smooth activeClass="active-arrow"> <img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink> */}
           </span>
           <span className='flex items-center gap-[30px] cursor-pointer' >
-            <p className='nav-text hidden-section-default-text hover:text-[#000] duration-300'><ScrollLink to="how-it-work" onClick={() => { setOpen(!open) }} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>How It Works</ScrollLink></p>
+            <p className='nav-text hidden-section-default-text nav-textt hover:text-[#000] duration-300'><ScrollLink to="how-it-work" onClick={() => { setOpen(!open) }} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>How It Works</ScrollLink></p>
             {/* <ScrollLink to="how-it-work" onClick={() => { setOpen(!open) }} spy smooth activeClass="active-arrow"> <img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink> */}
           </span>
           <span className='flex items-center gap-[30px] cursor-pointer'>
-            <p className='nav-text hidden-section-default-text hover:text-[#000] duration-300'><ScrollLink to="faq-id" onClick={() => { setOpen(!open) }} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>FAQs</ScrollLink></p>
+            <p className='nav-text hidden-section-default-text nav-textt hover:text-[#000] duration-300'><ScrollLink to="faq-id" onClick={() => { setOpen(!open) }} spy smooth activeClass={"hidden-section-default-text2 nav-text"}>FAQs</ScrollLink></p>
             {/* <ScrollLink to="faq-id" onClick={() => { setOpen(!open) }} spy smooth activeClass="active-arrow"> <img className="opacity-0 nav-arrow" src="/images/navarrow.svg" alt="" /></ScrollLink> */}
           </span>
           <span className='flex items-center gap-[30px]'>
-            <p className='font-[Inter] nav-text font-[700] hover:text-[#000] duration-300 text-[70px] text-[#A6A6A6]'>Blog</p>
+            <p className='font-[Inter] nav-text font-[700] hover:text-[#000] duration-300 text-[70px] nav-textt text-[#A6A6A6]'>Blog</p>
 
           </span>
           <Link href="/contact">
             <span className='flex items-center gap-[30px]'>
-              <p className={`font-[Inter] nav-text font-[700] hover:text-[#000] duration-300 text-[70px] text-[#A6A6A6] ${pathname === "/contact" ? 'text-[#A6A6A6]' : ' text-[#000]'} `}>Contact</p>
+              <p className={`font-[Inter] nav-text font-[700] hover:text-[#000] duration-300 text-[70px] nav-textt text-[#A6A6A6] ${pathname === "/contact" ? 'text-[#A6A6A6]' : ' text-[#000]'} `}>Contact</p>
             </span>
           </Link>
           <a target='blank' href="https://docs.google.com/forms/d/e/1FAIpQLScl1PE74kCRc6xnztjE4H8qwJuaoReWYvR6hbxPf4pK5Aqs1w/viewform?usp=dialog">
-          <button className='text-[#2AFF39] nav-text nav-button font-[Inter] translate-x-[-5%] font-[700] text-[70px] hover:text-[#000000] hover:bg-[#2AFF39]  duration-500 bg-[#000000] rounded-[100px] px-[40px]'>Join the Waitlist</button>
+          <button className='text-[#2AFF39] nav-text nav-button font-[Inter] translate-x-[-5%] font-[700] text-[70px] nav-textt hover:text-[#000000] hover:bg-[#2AFF39]  duration-500 bg-[#000000] rounded-[100px] px-[40px]'>Join the Waitlist</button>
           </a>
         </div>
       </div>
@@ -267,16 +271,16 @@ function page() {
             <img className='cursor-pointer bottom-bar-img h-[40%]' src="/images/baricon.svg" alt="" onClick={() => { setOpen(!open) }} />
           </div>
           <div className='h-[100%] flex-1 flex px-[6%] bottom-bar-text-box items-center justify-between'>
-            <p className='bottom-bar-button-box cursor-pointer bottom-bar-text link-non-active'><ScrollLink to="what" spy smooth activeClass={"link-active"}>What</ScrollLink></p>
-            <p className='bottom-bar-button-box cursor-pointer bottom-bar-text link-non-active'><ScrollLink to="how-it-work" spy smooth activeClass={"link-active"}> <span className='work-text-visible'>How It works</span> <span className='work-text-hidden'>Works</span></ScrollLink></p>
-            <p className='bottom-bar-button-box cursor-pointer bottom-bar-text link-non-active'><ScrollLink to="faq-id" spy smooth activeClass={"link-active"}>FAQs</ScrollLink></p>
+            <ScrollLink className='px-[30px] py-[8px] link-non-active bottom-bar-text bottom-bar-button-box' to="what" spy smooth activeClass={"link-active"}>What</ScrollLink>
+            <ScrollLink className='px-[30px] py-[8px] link-non-active bottom-bar-text bottom-bar-button-box' to="how-it-work" spy smooth activeClass={"link-active"}> <span className='work-text-visible'>How It works</span> <span className='work-text-hidden'>Works</span></ScrollLink>
+            <ScrollLink className='px-[30px] py-[8px] link-non-active bottom-bar-text bottom-bar-button-box' to="faq-id" spy smooth activeClass={"link-active"}>FAQs</ScrollLink>
 
             {/* <p className='font-[Inter] font-[800] faqs-text bottom-bar-text text-[32px] leading-[100%] text-[#A6A6A6]'>FAQs</p> */}
           </div>
         </div>
         <div className="circle-animation" >
           <div className="home section section-home px-[1%] w-full h-[100vh] relative bg-[white] text-[white]" >
-
+          {/* bottom-bar-button-box */}
             <Navbar />
 
             {/* =========== hero section ========= */}
@@ -286,7 +290,7 @@ function page() {
         {/* ----------------- What section ------------------- */}
         {/* <Meeting/> */}
         <div name="what" id="" className='px-[100px] duration-500 meeting-container'>
-          <div className=' py-[100px] meeting-padding-container meeting-box flex border-b border-b-[1px] border-b-[#A6A6A6]'>
+          <div className=' py-[150px] meeting-padding-container meeting-box flex border-b border-b-[1px] border-b-[#A6A6A6]'>
             <div className="meeting-left pt-[3%] w-[50%] bg-[]">
               <h2 className='text-[42px] font-[700] meeting-heading text font-[Lexend] leading-[122%] text-[#A6A6A6]'>Meet People Who Just Get You</h2>
               <p className='font-[Inter] font-[400] meeting-para mt-[60px] text-[32px] text-[#000000] leading-[100%]'>No more awkward intros. Afious connects you with students who share your interests, background, or school — so conversations flow naturally from the start.</p>
@@ -296,7 +300,7 @@ function page() {
             </div>
 
           </div>
-          <div className=' py-[100px] meeting-padding-container meeting-box flex border-b border-b-[1px] border-b-[#A6A6A6]'>
+          <div className=' py-[150px] meeting-padding-container meeting-box flex border-b border-b-[1px] border-b-[#A6A6A6]'>
             <div className="meeting-left pt-[3%] w-[50%] bg-[]">
               <h2 className='text-[42px] font-[700] meeting-heading font-[Lexend] leading-[122%] text-[#A6A6A6]'>Make a New Place Feel Like Home</h2>
               <p className='font-[Inter]  meeting-para mt-[60px] text-[32px] text-[#000000] leading-[100%]'>Starting over can feel overwhelming. Afious helps you build a support system wherever you are, one real connection at a time.</p>
@@ -306,7 +310,7 @@ function page() {
             </div>
 
           </div>
-          <div className=' py-[100px] meeting-padding-container meeting-box flex '>
+          <div className=' py-[150px] meeting-padding-container meeting-box flex '>
             <div className="meeting-left pt-[3%] w-[50%] bg-[]">
               <h2 className='text-[42px] font-[700] meeting-heading font-[Lexend] leading-[122%] text-[#A6A6A6]'>Your Circle Starts Here</h2>
               <p className='font-[Inter]  meeting-para mt-[60px] text-[32px] text-[#000000] leading-[100%]'>Go from “I don’t know anyone” to “These are my people.” Chat 1-on-1 or grow your own crew — all within one welcoming space.</p>

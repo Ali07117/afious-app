@@ -7,7 +7,7 @@ function contact() {
     <>
       <div id='contact' className={` duration-500 contact-wrapper px-[4.5rem] bg-[white]   w-full overflow-scroll min-h-[10px] z-[9999999] w-[100vw]  py-[10rem]`} >
       <Link href="/">
-        <button className='font-[notoo] absolute top-[4rem] contact-back-button left-[4.5rem] flex items-center gap-[3px] duration-500  nav-cross  text-[32px] font-[700] text-[#000000] bg-[#2AFF39] rounded-[40px] border-[0px] outline-[0px] px-[30px] py-[0px]'>
+        <button className='font-[notoo] absolute top-[4rem] contact-back-button left-[4.5rem] flex items-center gap-[3px] duration-500  nav-cross  text-[24px] font-[700] text-[#000000] bg-[#2AFF39] rounded-[40px] border-[0px] outline-[0px] px-[24px] py-[0px]'>
           <img className='h-[15px] rotate-[-180deg] contact-back-button-img' src="/images/navarrow.svg" alt="" />
           back
         </button>
