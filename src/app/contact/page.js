@@ -14,9 +14,11 @@ function contact() {
       </Link>
         <div className='flex contact-inner-wrapper gap-[8rem]'>
           <div className="contact-wrapper-left w-[50%]  z-[5] ">
-            <p className=" font-noto font-[700] contact-headings text-[2vw] leading-[5vw]  text-[#A6A6A6]">Let’s work together</p>
-            <p className=" font-[Inter] font-[400] contact-sub-heading leading-[3rem] text-[2rem] mt-[1.5rem] text-[--textprimary]">Ready to bring your vision to life? We're excited to hear about your project!</p>
-            <p className='font-[Inter] text-[20px]  contact-para mt-[1rem] text-[--textprimary] font-[400]'>Whether you're looking to refine an existing product, or develop a full product ecosystem, we're here to bring your vision to life.</p>
+            {/* <p className=" font-noto font-[700] contact-headings text-[2vw] leading-[5vw]  text-[#A6A6A6]"></p> */}
+            <p className='font-[Inter] font-[700] hero-heading text-[12vw] leading-[98%] text-[#A6A6A6]'>Let’s connect</p>
+            <p className='font-[Lexend] font-[700] hero-para text-[2.8vw] mt-[40px]  leading-[124%] text-[#000]'>Got questions, ideas, or feedback? We’d love to hear from you!</p>
+            {/* <p className=" font-[Inter] font-[400] contact-sub-heading leading-[3rem] text-[2rem] mt-[1.5rem] text-[--textprimary]">Ready to bring your vision to life? We're excited to hear about your project!</p> */}
+            <p className='font-[Inter] font-[400] meeting-para mt-[40px] text-[24px] text-[#000000] leading-[100%]'>Afious is all about helping international students find their community faster. Whether you’re a student looking to meet new people, a university staff member exploring partnerships, or just curious about what we do — we’re here to listen.</p>
           </div>
           {/* <form ></form> */}
           <form
@@ -24,15 +26,19 @@ function contact() {
             method="POST"
             className="contact-wrapper-right w-[50%]  z-[5] ">
             <div className="input-box flex flex-col gap-[0.5rem] w-[100%] w-[100%]">
-              <label className='text-[--textprimary] font-[Inter] font-[300] text-[16px]' htmlFor="name">Name</label>
+              <label className='text-[--textprimary] font-[Inter] font-[300] text-[16px]' htmlFor="name">Name (Your full name)</label>
               <input className='border-[2px] border-[#A6A6A6] w-[100%] text-[--textprimary] px-[0.5rem] outline-none h-[4.5rem] bg-transparent rounded-[0.5rem]' id='name' name='name' type="text" required />
             </div>
             <div className="input-box flex flex-col gap-[0.5rem] mt-[3rem] w-[100%]">
-              <label className='text-[--textprimary] font-[Inter] font-[300] text-[16px]' htmlFor="email">Email Address</label>
+              <label className='text-[--textprimary] font-[Inter] font-[300] text-[16px]' htmlFor="email">Email Address (So we can reply to you)</label>
               <input className='border-[2px] border-[#A6A6A6] w-[100%] text-[--textprimary] px-[0.5rem] h-[4.5rem] outline-none bg-transparent rounded-[0.5rem]' id='email' name='email' type="email" required />
             </div>
             <div className="input-box flex flex-col gap-[0.5rem] mt-[3rem] w-[100%]">
-              <label className='text-[--textprimary] font-[Inter] font-[300] text-[16px]' htmlFor="message">Project details</label>
+              <label className='text-[--textprimary] font-[Inter] font-[300] text-[16px]' htmlFor="whoyouare">Who you are (Student, University Staff, Partner, Other)</label>
+              <textarea className='border-[2px] rounded-[0.5rem] w-[100%] text-[--textprimary] p-[0.5rem] bg-[transparent] resize-none border-[#A6A6A6] h-[4.5rem] outline-none' id='whoyouare' name="whoyouare" required ></textarea>
+            </div>
+            <div className="input-box flex flex-col gap-[0.5rem] mt-[3rem] w-[100%]">
+              <label className='text-[--textprimary] font-[Inter] font-[300] text-[16px]' htmlFor="message">Message (Tell us what’s on your mind)</label>
               <textarea className='border-[2px] rounded-[0.5rem] w-[100%] text-[--textprimary] p-[0.5rem] bg-[transparent] resize-none border-[#A6A6A6] h-[11rem] outline-none' id='message' name="message" required ></textarea>
             </div>
             {/* ------------------ */}
