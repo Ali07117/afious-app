@@ -325,7 +325,7 @@ function page() {
           {/* ------------- How it work section start --------------- */}
           <div className='px-[100px] craft-section work-container flex min-h-[100px] bg-[] work-margin-container pt-[100px]'>
             <div className="w-[40%] bg-[] h-[100%] work-left">
-              <h2 className='text-[#A6A6A6] work-heading font-[Inter] font-[800] text-[70px] '>How It Works</h2>
+              <h2 className='text-[#A6A6A6] work-heading font-[Inter] font-[800] text-[72px] '>How It Works</h2>
             </div>
             <div className="w-[60%] bg-[] relative work-box work-box-right flex flex-col gap-[3%] h-[100%] right">
               <div className='bg-[#FFFFFF] cards1 card-box py-[30px] work-1 px-[35px] border border-[1px] border-[#A6A6A6] rounded-[16px]'>
