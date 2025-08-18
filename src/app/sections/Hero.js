@@ -23,7 +23,7 @@ function Hero() {
       </div>
       {/* <p className='text-[50px] font-bold absolute top-[200px] left-[300px] text-[white] z-[99]'>FFFFF</p> */}
       <div className='relative ffdd flex mobile-hero-container overflow-hidden h-[100%] w-[100%]'>
-      <div className='h-[100%] overflow-hidden left-0 flex justify-center w-1/3 z-[98]'>
+      {/* <div className='h-[100%] overflow-hidden left-0 flex justify-center w-1/3 z-[98]'>
         <div className='h-[100%] ffgg translate-x-[-110%]  w-[50%] bg-[white] '></div>        
         <div className='h-[100%] ffgg translate-x-[110%] w-[50%] bg-[white] '></div>        
       </div>
@@ -34,7 +34,7 @@ function Hero() {
       <div className='h-[100%] overflow-hidden absolute left-2/3 flex bg-transparent justify-center w-1/3 z-[98]'>
         <div className='h-[100%] ffgg translate-x-[-110%] w-[50%] bg-[white] '></div>
         <div className='h-[100%] ffgg translate-x-[110%] w-[50%] bg-[white] '></div>
-      </div>
+      </div> */}
 
         {/* <img className='rounded-[20px] w-[100%] hero-img opacity-[1] z-[] h-[100%] w-[100%]  object-cover' src="/images/full-hero.svg" alt="" /> */}
         <div className='h-[100%] w-[0px] bg-[#FFFFFF] z-[99] white-bar1 opacity-[0] absolute top-[0px] left-1/3  '></div>

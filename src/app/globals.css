@@ -132,7 +132,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 70px;
-  color: #000000;
+  /* color: #000000; */
 }
 
 .nav-arrow {
@@ -213,13 +213,21 @@ body {
 @media screen and (max-width: 600px) {.meeting-box{flex-direction: column; gap: 30px;} .meeting-para{margin-top: 10px; font-size: 18px;} .meeting-heading{font-size: px;} .meeting-left, .meeting-right{width: 100%; }}
 
 /* meeting section */
-
+.text-layer{
+  /* color: red; */
+  /* position: absolute; */
+  /* top: 20%; */
+  /* left: 10%; */
+  /* z-index: 2; */
+  /* mix-blend-mode: color-burn !important;  */
+}
 /* work section */
 
 @media screen and (max-width: 1480px) {.work-heading{font-size: 50px;} .work-card-heading{font-size: 38px;} .work-card-para{font-size: 28px; margin-top: 10px;} .card-box{padding: 25px 30px;}}
 @media screen and (max-width: 1250px) { .work-container{padding-left: 40px; padding-right:40px;} }
 @media screen and (max-width: 1100px) { .work-container{padding-left: 20px; padding-right:20px;} .work-heading{font-size: 40px;} .work-card-heading{font-size: 30px;} .work-card-para{font-size: 22px; margin-top: 10px;} .card-box{padding: 20px 25px;} .work-box-right{gap: 25px;}}
-@media screen and (max-width: 850px) { .work-container{padding-left: 20px; padding-right:20px;} .work-heading{font-size: 40px;} .work-card-heading{font-size: 32px;} .work-card-para{font-size: 22px;} .work-container{flex-direction: column; } .work-left, .work-box-right{width: 100%;}}
+@media screen and (max-width: 850px) { .work-container{padding-left: 20px; padding-right:20px;} .work-heading{font-size: 40px;} .work-card-heading{transform: translateY(-5px);} .work-card-heading{font-size: 32px;} .work-card-para{font-size: 22px;} .work-container{flex-direction: column; } .work-left, .work-box-right{width: 100%;}}
+@media screen and (max-width: 700px) { .work-card-heading{transform: translateY(0px);} }
 @media screen and (max-width: 600px) { .work-container{padding-left: 20px; padding-right:20px;} .work-heading{font-size: 32px;} .work-card-heading{font-size: 28px;} .work-card-para{font-size: 18px; width: 100%;} .work-container{flex-direction: column; } .card-box{padding: 20px 10px;}  .work-left, .work-box-right{width: 100%;}}
 @media screen and (max-width: 490px) {  .work-card-para{font-size: 16px;} .card-box{padding: 10px 10px;} }
 @media screen and (max-width: 390px) { .nearby{display: none;} }
@@ -228,16 +236,19 @@ body {
 
 /* faq section */
 @media screen and (max-width: 1480px) {.faq-heading{font-size: 50px;}}
-@media screen and (max-width: 1250px) { .faq-heading{font-size: 40px; padding-left: 40px; padding-right: 40px;} .question{font-size: 28px;} .before-signing, .after-signing{font-size: 28px; padding-left: 40px; padding-right: 40px;} .faq-div{padding-left: 0px; padding-right: 0px; margin-left: 40px; margin-right: 40px;}}
-@media screen and (max-width: 1100px) { .faq-heading{font-size: 40px; padding-left: 20px; padding-right: 20px;} .before-signing, .after-signing{font-size: 28px; padding-left: 20px; padding-right: 20px;}  .faq-div{padding-top: 10px; padding-bottom: 10px; margin-left: 20px; margin-right: 20px;} .question{font-size: 22px; font-weight: 600;} .before-signing, .after-signing{font-size: 22px;}}
+@media screen and (max-width: 1250px) { .faq-heading{font-size: 40px; padding-left: 40px; padding-right: 40px;} .answer{font-size: 22px;} .question{font-size: 28px;} .before-signing, .after-signing{font-size: 28px; padding-left: 40px; padding-right: 40px;} .faq-div{padding-left: 0px; padding-right: 0px; margin-left: 40px; margin-right: 40px;}}
+@media screen and (max-width: 1100px) { .faq-heading{font-size: 40px; padding-left: 20px; padding-right: 20px;} .before-signing, .after-signing{font-size: 28px; padding-left: 20px; padding-right: 20px;}  .faq-div{padding-top: 10px; padding-bottom: 10px; margin-left: 20px; margin-right: 20px;} .answer{font-size: 16px;} .question{font-size: 22px; font-weight: 600;} .before-signing, .after-signing{font-size: 22px;}}
 @media screen and (max-width: 1000px) {.faq-heading{padding-top: 50px;}}
-@media screen and (max-width: 850px) { .faq-heading, .work-heading{font-size: 40px; padding-bottom: 40px; padding-top: 0px;  line-height: 120%;} .before-signing, .after-signing{font-size: 18px;}}
+@media screen and (max-width: 850px) { .faq-heading, .work-heading{font-size: 40px; padding-bottom: 40px; padding-top: 0px;  line-height: 120%;} .answer{font-size: 22px;} .question{font-size: 28px;} .before-signing, .after-signing{font-size: 18px;}}
 @media screen and (max-width: 600px) { .faq-heading, .work-heading{font-size: 40px; } .question{font-size: 18px; font-weight: 600;} .answer{font-size: 15px;} .before-signing, .after-signing{font-size: 16px;}}
 
 
 
 @media screen and (max-width: 1000px) { .faq-container{margin-top: 35vh;}}
 @media screen and (max-width: 600px) { .faq-container{margin-top: 25vh;}}
+@media screen and (min-width: 850px) { .answer-margin{margin-top: 40px;}}
+@media screen and (max-width: 850px) { .answer-margin{margin-top: 10px;}}
+@media screen and (max-width: 600px) { .faq-question-padding{padding-top: 15px; padding-bottom: 15px;}}
 /* faq section */
 
 @media screen and (max-width: 1250px) { .bottom-button-box{padding-left: 40px; padding-right: 40px;} }
