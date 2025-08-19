@@ -61,7 +61,7 @@ function page() {
         trigger: ".home",
         scrub: 2,
         start: "top top",
-        end: "+=200%",
+        end: "+=250%",
         pin: true,
       },
     });

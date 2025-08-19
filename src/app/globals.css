@@ -177,6 +177,9 @@ body {
 
 /* responsive */
 
+.hero-visible {
+  transition: transform 0.2s ease-out;
+}
 
 
 /* bottom bar */
