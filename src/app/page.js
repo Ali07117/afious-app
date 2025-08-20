@@ -67,13 +67,13 @@ function page() {
     });
     
     // Step A: Split into 3 with gap
-    tl.to(".left-image", {
-      x: "-10px", // half of 10px
-    }, "split");
+    // tl.to(".left-image", {
+    //   x: "-10px", // half of 10px
+    // }, "split");
     
-    tl.to(".right-image", {
-      x: "10px", // half of 10px
-    }, "split");
+    // tl.to(".right-image", {
+    //   x: "10px", // half of 10px
+    // }, "split");
     
     // Step B: Fade everything out later
     tl.to(".hero-text-container-main-2", {

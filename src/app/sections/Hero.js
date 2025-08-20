@@ -64,7 +64,7 @@ function Hero() {
         <p className='font-[Inter] font-[700] hero-heading text-[12vw] text-image leading-[98%]'>Find your crew</p>
         <p className='font-[Lexend] font-[700] hero-para text-[2.8vw] mt-[40px]  leading-[124%] text-[#A6A6A6]'>Meet people who get you — from your school, your city, or halfway across the world. Afious helps international students connect through shared interests, hometowns, and campus life</p>
       </div>
-      <div className='hero-text-container-main-2 hidden-hero text-container absolute top-[15%] px-[3vw] z-[11]'>
+      <div className='hero-text-container-main-2 -hidden-hero text-container absolute top-[15%] px-[3vw] z-[11]'>
         <p className='font-[Inter] font-[700] hero-heading text-[12vw] leading-[98%] text-[#FFFFFF]'>Find your crew</p>
         <p className='font-[Lexend] font-[700] hero-para text-[2.8vw] mt-[40px]  leading-[124%] text-[#FFFFFF]'>Meet people who get you — from your school, your city, or halfway across the world. Afious helps international students connect through shared interests, hometowns, and campus life</p>
       </div>
@@ -88,48 +88,48 @@ function Hero() {
         <div className='h-[100%] w-[0px] bg-[#FFFFFF] z-[99] white-bar1 opacity-[0] absolute top-[0px] left-1/3  '></div>
         <div className='h-[100%] w-[0px] bg-[#FFFFFF] z-[99] white-bar2 opacity-[0] absolute top-[0px] right-1/3 '></div>
         <div className='w-[100%] h-[100%] absolute flex'>
-          <div className='w-[100%] center-image hidden-hero h-[100%]'>
+          <div className='w-[100%] center-image  h-[100%]'>
             <img
               className='object-cover rounded-[0px] h-[100%] w-[100%]'
               src="/images/full-hero.svg"
               alt=""
             />
           </div>
-          <div className='w-1/3 relative h-[100%] hero-visible left-image overflow-hidden'>
-          <div className='hero-text-container-main-2 text-container absolute top-[15%] w-[100vw] px-[3vw] bg-[] z-[11]'>
+          {/* <div className='w-1/3 relative h-[100%] hero-visible left-image overflow-hidden'> */}
+          {/* <div className='hero-text-container-main-2 text-container absolute top-[15%] w-[100vw] px-[3vw] bg-[] z-[11]'>
         <p className='font-[Inter] font-[700] hero-heading text-[12vw] leading-[98%] text-[#FFFFFF]'>Find your crew</p>
         <p className='font-[Lexend] font-[700] hero-para text-[2.8vw] mt-[40px]  leading-[124%] text-[#FFFFFF]'>Meet people who get you — from your school, your city, or halfway across the world. Afious helps international students connect through shared interests, hometowns, and campus life</p>
-      </div>
-            <img
+      </div> */}
+            {/* <img
               className='object-cover rounded-l-[20px] h-[100%] w-[100%]'
               src="/images/heroimg1.svg"
               alt=""
             />
-          </div>
+          </div> */}
 
-          <div className='w-1/3 relative overflow-hidden h-[100%] hero-visible opacity-[] center-image'>
-          <div className='hero-text-container-main-2 text-container absolute top-[15%] translate-x-[-32.35vw] w-[100vw] px-[3vw] z-[11]'>
+          {/* <div className='w-1/3 relative overflow-hidden h-[100%] hero-visible opacity-[] center-image'> */}
+          {/* <div className='hero-text-container-main-2 text-container absolute top-[15%] translate-x-[-32.35vw] w-[100vw] px-[3vw] z-[11]'>
         <p className='font-[Inter] font-[700] hero-heading text-[12vw] leading-[98%] text-[#FFFFFF]'>Find your crew</p>
         <p className='font-[Lexend] font-[700] hero-para text-[2.8vw] mt-[40px]  leading-[124%] text-[#FFFFFF]'>Meet people who get you — from your school, your city, or halfway across the world. Afious helps international students connect through shared interests, hometowns, and campus life</p>
-      </div>
-            <img
+      </div> */}
+            {/* <img
               className='object-cover h-[100%] w-[100%]'
               src="/images/heroimg2.svg"
               alt=""
             />
-          </div>
+          </div> */}
 
-          <div className='w-1/3 h-[100%] hero-visible right-image relative overflow-hidden'>
-          <div className='hero-text-container-main-2 text-container absolute top-[15%] translate-x-[-64.8vw] w-[100vw] px-[3vw] z-[11]'>
+          {/* <div className='w-1/3 h-[100%] hero-visible right-image relative overflow-hidden'> */}
+          {/* <div className='hero-text-container-main-2 text-container absolute top-[15%] translate-x-[-64.8vw] w-[100vw] px-[3vw] z-[11]'>
         <p className='font-[Inter] font-[700] hero-heading text-[12vw] leading-[98%] text-[#FFFFFF]'>Find your crew</p>
         <p className='font-[Lexend] font-[700] hero-para text-[2.8vw] mt-[40px]  leading-[124%] text-[#FFFFFF]'>Meet people who get you — from your school, your city, or halfway across the world. Afious helps international students connect through shared interests, hometowns, and campus life</p>
-      </div>
-            <img
+      </div> */}
+            {/* <img
               className='object-cover rounded-r-[20px] h-[100%] w-[100%]'
               src="/images/heroimg3.svg"
               alt=""
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

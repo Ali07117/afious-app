@@ -119,7 +119,7 @@ function Faq() {
                     className='mx-[30px] faq-div px-[70px] border-b border-b-[#B6BDC6] faq-question-padding border-b-[1px] py-[28px]'
                 >
                     <div
-                        className={`question font-[Inter] hover:text-[#000] font-[800] duration-300 text-[32px] leading-[98%] cursor-pointer ${openIndex === index ? 'text-[#000]' : 'text-[#A6A6A6]'
+                        className={`question font-[Inter] hover:text-[#000] font-[800] duration-300 text-[32px] leading-[140%] cursor-pointer ${openIndex === index ? 'text-[#000]' : 'text-[#A6A6A6]'
                             }`}
                         onClick={() => toggle(index)}
                     >
@@ -143,7 +143,7 @@ function Faq() {
                     className='mx-[30px] faq-div px-[70px] border-b border-b-[#B6BDC6] faq-question-padding border-b-[1px] py-[28px]'
                 >
                     <div
-                        className={`question font-[Inter] font-[800] hover:text-[#000] text-[32px] duration-300 leading-[98%] cursor-pointer ${openIndex === index + beforeSignupFaq.length ? 'text-[#000]' : 'text-[#A6A6A6]'
+                        className={`question font-[Inter] font-[800] hover:text-[#000] text-[32px] duration-300 leading-[140%] cursor-pointer ${openIndex === index + beforeSignupFaq.length ? 'text-[#000]' : 'text-[#A6A6A6]'
                             }`}
                         onClick={() => toggle(index + beforeSignupFaq.length)}
                     >
