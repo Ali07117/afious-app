@@ -90,7 +90,7 @@ function Hero() {
         <div className='w-[100%] h-[100%] absolute flex'>
           <div className='w-[100%] center-image  h-[100%]'>
             <img
-              className='object-cover rounded-[0px] h-[100%] w-[100%]'
+              className='object-cover rounded-[20px] hero-image-new h-[100%] w-[100%]'
               src="/images/full-hero.svg"
               alt=""
             />
