@@ -17,10 +17,10 @@ function contact() {
         <div className='flex contact-inner-wrapper gap-[8rem]'>
           <div className="contact-wrapper-left w-[50%]  z-[5] ">
             {/* <p className=" font-noto font-[700] contact-headings text-[2vw] leading-[5vw]  text-[#A6A6A6]"></p> */}
-            <p className=' work-heading font-[Inter] font-[800] text-[72px] leading-[98%] text-[#A6A6A6]'>Let’s connect</p>
-            <p className='font-[Lexend] work-card-heading leading-[124%] font-[700] text-[48px] mt-[40px] text-[#1c1c1c]'>Got questions, ideas, or feedback? We’d love to hear from you!</p>
+            <p className=' font-[Inter] contact-heading-new font-[800] text-[72px] leading-[98%] text-[#A6A6A6]'>Let’s connect</p>
+            <p className='font-[Lexend]  leading-[124%] contact-sub-heading-new font-[700] text-[48px] mt-[40px] text-[#1c1c1c]'>Got questions, ideas, or feedback? We’d love to hear from you!</p>
             {/* <p className=" font-[Inter] font-[400] contact-sub-heading leading-[3rem] text-[2rem] mt-[1.5rem] text-[--textprimary]">Ready to bring your vision to life? We're excited to hear about your project!</p> */}
-            <p className='font-[Inter] font-[400] meeting-para mt-[40px] text-[24px] text-[#000000] leading-[140%]'>Afious is all about helping international students find their community faster. Whether you’re a student looking to meet new people, a university staff member exploring partnerships, or just curious about what we do — we’re here to listen.</p>
+            <p className='font-[Inter] font-[400] mt-[40px] text-[24px] contact-para-new text-[#000000] leading-[140%]'>Afious is all about helping international students find their community faster. Whether you’re a student looking to meet new people, a university staff member exploring partnerships, or just curious about what we do — we’re here to listen.</p>
           </div>
           {/* <form ></form> */}
           <form
@@ -37,7 +37,7 @@ function contact() {
             </div>
             <div className="input-box flex flex-col gap-[0.5rem] mt-[3rem] w-[100%]">
               <label className='text-[--textprimary] font-[Inter] font-[300] text-[16px]' htmlFor="whoyouare">Who you are (Student, University Staff, Partner, Other)</label>
-              <textarea className='border-[2px] rounded-[0.5rem] w-[100%] text-[--textprimary] p-[0.5rem] bg-[transparent] resize-none border-[#A6A6A6] h-[4.5rem] outline-none' id='whoyouare' name="whoyouare" required ></textarea>
+              <input className='border-[2px] border-[#A6A6A6] w-[100%] text-[--textprimary] px-[0.5rem] h-[4.5rem] outline-none bg-transparent rounded-[0.5rem]' id='who-you-are' name='who-you-are' type="text" required />
             </div>
             <div className="input-box flex flex-col gap-[0.5rem] mt-[3rem] w-[100%]">
               <label className='text-[--textprimary] font-[Inter] font-[300] text-[16px]' htmlFor="message">Message (Tell us what’s on your mind)</label>
