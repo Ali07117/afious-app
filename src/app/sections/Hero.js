@@ -9,52 +9,52 @@ import BottomBar from '../components/BottomBar';
 
 function Hero() {
 
-  useEffect(() => {
-    const wrapper = document.querySelector(".hero-wrapper");
-    if (!wrapper) return;
+  // useEffect(() => {
+  //   const wrapper = document.querySelector(".hero-wrapper");
+  //   if (!wrapper) return;
   
-    const handleParallax = (e) => {
-      const { width, height, left, top } = wrapper.getBoundingClientRect();
-      const x = (e.clientX - left) / width - 0.5;
-      const y = (e.clientY - top) / height - 0.5;
+  //   const handleParallax = (e) => {
+  //     const { width, height, left, top } = wrapper.getBoundingClientRect();
+  //     const x = (e.clientX - left) / width - 0.5;
+  //     const y = (e.clientY - top) / height - 0.5;
   
-      // Only run when cursor is inside wrapper
-      if (
-        e.clientX < left ||
-        e.clientX > left + width ||
-        e.clientY < top ||
-        e.clientY > top + height
-      ) {
-        return;
-      }
+  //     // Only run when cursor is inside wrapper
+  //     if (
+  //       e.clientX < left ||
+  //       e.clientX > left + width ||
+  //       e.clientY < top ||
+  //       e.clientY > top + height
+  //     ) {
+  //       return;
+  //     }
   
-      const moveX = x * 10;
-      const moveY = y * 10;
+  //     const moveX = x * 10;
+  //     const moveY = y * 10;
   
-      const images = document.querySelectorAll(".hero-visible img");
+  //     const images = document.querySelectorAll(".hero-visible img");
   
-      images.forEach((el, index) => {
-        let speedFactor = 1; // default (same as moveX/moveY)
+  //     images.forEach((el, index) => {
+  //       let speedFactor = 1; // default (same as moveX/moveY)
   
-        // custom speeds
-        if (index === 1) speedFactor = 0.5; // center one slower
-        if (index === 0) speedFactor = 0.8; // left one medium
-        if (index === 2) speedFactor = 0.8; // right one medium
+  //       // custom speeds
+  //       if (index === 1) speedFactor = 0.5; // center one slower
+  //       if (index === 0) speedFactor = 0.8; // left one medium
+  //       if (index === 2) speedFactor = 0.8; // right one medium
   
-        el.style.transform = `translate(${moveX * speedFactor}px, ${moveY * speedFactor}px)`;
-      });
+  //       el.style.transform = `translate(${moveX * speedFactor}px, ${moveY * speedFactor}px)`;
+  //     });
   
-      // text movement (slower, subtle)
-      const text = document.querySelector(".hero-text-container-main-2");
-      if (text) {
-        text.style.transform = `translate(${moveX * 0.3}px, ${moveY * 0.3}px)`;
-      }
-    };
+  //     // text movement (slower, subtle)
+  //     const text = document.querySelector(".hero-text-container-main-2");
+  //     if (text) {
+  //       text.style.transform = `translate(${moveX * 0.3}px, ${moveY * 0.3}px)`;
+  //     }
+  //   };
   
-    wrapper.addEventListener("mousemove", handleParallax);
+  //   wrapper.addEventListener("mousemove", handleParallax);
   
-    return () => wrapper.removeEventListener("mousemove", handleParallax);
-  }, []);
+  //   return () => wrapper.removeEventListener("mousemove", handleParallax);
+  // }, []);
   return (
     <div
       className=' h-[calc(100vh-90px)] bg-[] relative hero-wrapper hero-main-container w-[100%] flex items-cennter justify-center'
@@ -96,7 +96,7 @@ function Hero() {
             />
           </div>
           <div className='w-1/3 relative h-[100%] hero-visible left-image overflow-hidden'>
-          <div className='hero-text-container-main-2 text-container absolute top-[15%] w-[100vw] px-[3vw] z-[11]'>
+          <div className='hero-text-container-main-2 text-container absolute top-[15%] w-[100vw] px-[3vw] bg-[] z-[11]'>
         <p className='font-[Inter] font-[700] hero-heading text-[12vw] leading-[98%] text-[#FFFFFF]'>Find your crew</p>
         <p className='font-[Lexend] font-[700] hero-para text-[2.8vw] mt-[40px]  leading-[124%] text-[#FFFFFF]'>Meet people who get you — from your school, your city, or halfway across the world. Afious helps international students connect through shared interests, hometowns, and campus life</p>
       </div>
@@ -108,7 +108,7 @@ function Hero() {
           </div>
 
           <div className='w-1/3 relative overflow-hidden h-[100%] hero-visible opacity-[] center-image'>
-          <div className='hero-text-container-main-2 text-container absolute top-[15%] translate-x-[-32.4vw] w-[100vw] px-[3vw] z-[11]'>
+          <div className='hero-text-container-main-2 text-container absolute top-[15%] translate-x-[-32.35vw] w-[100vw] px-[3vw] z-[11]'>
         <p className='font-[Inter] font-[700] hero-heading text-[12vw] leading-[98%] text-[#FFFFFF]'>Find your crew</p>
         <p className='font-[Lexend] font-[700] hero-para text-[2.8vw] mt-[40px]  leading-[124%] text-[#FFFFFF]'>Meet people who get you — from your school, your city, or halfway across the world. Afious helps international students connect through shared interests, hometowns, and campus life</p>
       </div>
